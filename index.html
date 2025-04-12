@@ -1,81 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CBS News | Breaking news, top stories & today's latest headlines</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="icon" href="img/icon.ico" />
+  <link rel="stylesheet" href="styles.css" />
   <script src="script.js" defer></script>
 </head>
+
 <body>
   <header class="cbs-header">
-      <div class="header-container">
-        <div class="header-navs-container">
-          <button class="burger-menu" id="burger-menu">☰</button>
-          <nav class="nav-links" id="nav-links">
-            <ul>
-              <li><a href="#">Latest</a></li>
-              <li><a href="#">Local News</a></li>
-              <li><a href="#">Live</a></li>
-              <li><a href="#">Shows</a></li>
-              <li><a href="#">&#8230;</a></li>
-            </ul>
-          </nav>
-        </div>
-        <div class="header-logo-container">
-          <div>
-            <img src="img/Logo.png" alt="CBS News Logo" width="150"/>
+    <div class="header-container">
+      <div class="header-navs-container">
+        <!-- Burger menu transformed into 9 squares -->
+        <button class="burger-menu" id="burger-menu">
+          <div class="grid-icon">
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
           </div>
-        </div>
-        <div class="header-icons">
-          <button id="search-btn">🔍</button>
+        </button>
+        <nav class="nav-links" id="nav-links">
+          <ul>
+            <li><a href="#">Latest</a></li>
+            <li><a href="#">Local News</a></li>
+            <li><a href="#"><span class="red-dot"></span> Live</a></li>
+            <li><a href="#">Shows</a></li>
+            <li><a href="#">&#8230;</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-logo-container">
+        <div>
+          <img src="img/Logo.png" alt="CBS News Logo" width="150" />
         </div>
       </div>
+      <div class="header-icons">
+        <button id="search-btn">🔍</button>
+      </div>
+    </div>
   </header>
-  
+
   <!-- Hero Section -->
-<section class="hero">
-  <img src="https://via.placeholder.com/1000x500" alt="Main News" />
-  <div class="hero-text">
+  <section class="hero">
+    <img src="https://via.placeholder.com/1000x500" alt="Main News" />
+    <div class="hero-text">
       <h1>Main Headline Article Title Goes Here</h1>
       <p class="author">By Jane Reporter | April 9, 2025</p>
       <p class="summary">
-          This is a short summary of the main article. It introduces the story and
-          captures the reader's attention.
+        This is a short summary of the main article. It introduces the story and
+        captures the reader's attention.
       </p>
-  </div>
-</section>
+    </div>
+  </section>
 
-<!-- Articles Section -->
-<section class="articles">
-  <div class="card">
+  <!-- Articles Section -->
+  <section class="articles">
+    <div class="card">
       <img src="https://via.placeholder.com/400x200" alt="Article 1" />
       <div class="card-text">
-          <span class="category">Tech</span>
-          <h2>Article Title One</h2>
-          <p>Quick summary of the article content in a few lines.</p>
+        <span class="category">Tech</span>
+        <h2>Article Title One</h2>
+        <p>Quick summary of the article content in a few lines.</p>
       </div>
-  </div>
-  <div class="card">
+    </div>
+    <div class="card">
       <img src="https://via.placeholder.com/400x200" alt="Article 2" />
       <div class="card-text">
-          <span class="category">Sports</span>
-          <h2>Article Title Two</h2>
-          <p>Quick summary of the article content in a few lines.</p>
+        <span class="category">Sports</span>
+        <h2>Article Title Two</h2>
+        <p>Quick summary of the article content in a few lines.</p>
       </div>
-  </div>
-</section>
+    </div>
+  </section>
 
-<!-- Footer -->
-<footer class="footer">
-  <div class="footer-links">
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-links">
       <a href="#">About</a>
       <a href="#">Privacy</a>
       <a href="#">Terms</a>
       <a href="#">Contact</a>
-  </div>
-  <p>&copy; 2025 USA TODAY. All rights reserved.</p>
-</footer>
+    </div>
+    <p>&copy; 2025 CBS NEWS. All rights reserved.</p>
+  </footer>
 
 </body>
+
 </html>

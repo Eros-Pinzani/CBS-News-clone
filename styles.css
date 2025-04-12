@@ -1,30 +1,33 @@
 /* styles.css */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-.cbs-header {
-    position: sticky;
-    top: 0; /* Fissa l'header alla parte superiore */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #fff;
-    border-bottom: 1px solid #E8E8E8;
-    height: 48px;
-    padding: 0 5px;
-    margin: 0 auto;
-    max-width: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-.header-container{
+.cbs-header {
+  position: sticky;
+  top: 0;
+  /* Fissa l'header alla parte superiore */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border-bottom: 1px solid #E8E8E8;
+  height: 48px;
+  padding: 0 5px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 1000px;
-  position: relative; /* Necessario per posizionare il logo */
-  margin: auto; /* Centra il contenitore */
+  position: relative;
+  /* Necessario per posizionare il logo */
+  margin: auto;
+  /* Centra il contenitore */
 }
 
 .header-logo-container {
@@ -44,7 +47,8 @@ body {
 }
 
 .nav-links {
-  flex: 0; /* Occupa lo spazio disponibile */
+  flex: 0;
+  /* Occupa lo spazio disponibile */
   display: flex;
   align-items: center;
   position: absolute;
@@ -76,7 +80,8 @@ ul {
 .header-icons {
   display: flex;
   align-items: center;
-  margin-left: auto; /* Spinge la lente completamente a destra */
+  margin-left: auto;
+  /* Spinge la lente completamente a destra */
 }
 
 .header-icons button {
@@ -88,9 +93,36 @@ ul {
   cursor: pointer;
 }
 
+
+/* Red dot next to "Live" */
+.red-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+/* 9-square grid for burger menu */
+.burger-menu .grid-icon {
+  display: grid;
+  grid-template-columns: repeat(3, 8px);
+  grid-gap: 4px;
+}
+
+.burger-menu .grid-icon span {
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: black;
+}
+
+
 /* Nascondi il burger menu di default */
 .burger-menu {
-  display: none; /* Nascondi il burger menu di default */
+  display: none;
+  /* Nascondi il burger menu di default */
   background: none;
   border: none;
   font-size: 24px;
@@ -99,48 +131,52 @@ ul {
 
 @media (max-width: 1360px) {
   .header-container {
-      max-width: 95%; /* Limita la larghezza massima del contenitore */
+    max-width: 95%;
+    /* Limita la larghezza massima del contenitore */
   }
 }
 
 
 @media (max-width: 1015px) {
   .burger-menu {
-      display: block; /* Mostra il burger menu sotto i 992px */
+    display: block;
+    /* Mostra il burger menu sotto i 992px */
   }
 
   .nav-links {
-      display: none; /* Nasconde il nav sotto i 1015px */
+    display: none;
+    /* Nasconde il nav sotto i 1015px */
   }
 
   .nav-links.active {
-      display: flex; /* Mostra il nav quando il burger menu è attivo */
-      flex-direction: column;
-      position: absolute;
-      top: 48px;
-      left: 0;
-      background-color: white;
-      width: 100%;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    /* Mostra il nav quando il burger menu è attivo */
+    flex-direction: column;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
   .nav-links ul {
-      flex-direction: column;
-      gap: 10px;
-      padding: 0;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
   }
 }
 
 
 
-  /* Hero Section */
+/* Hero Section */
 .hero {
   max-width: 1000px;
   margin: 2rem auto;
   background: #fff;
   padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .hero img {
@@ -181,7 +217,7 @@ ul {
   background: #fff;
   border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .card img {
@@ -224,8 +260,4 @@ ul {
   text-decoration: none;
   margin: 0 1rem;
   font-size: 0.9rem;
-}
-
-.footer-links a:hover {
-  color: #fff;
 }
