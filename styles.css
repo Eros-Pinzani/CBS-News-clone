@@ -1,21 +1,16 @@
 /* styles.css */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Proxima Nova", sans-serif;
 }
 
 .cbs-header {
   position: sticky;
   top: 0;
   /* Fissa l'header alla parte superiore */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   background-color: #fff;
   border-bottom: 1px solid #E8E8E8;
-  height: 48px;
-  padding: 0 5px;
-  margin: 0 auto;
+  height: 64px;
   max-width: 100%;
 }
 
@@ -23,42 +18,41 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 1000px;
+  width: 100%;
+  height: 100%;
   position: relative;
-  /* Necessario per posizionare il logo */
-  margin: auto;
-  /* Centra il contenitore */
+  max-width: 1320px;
+  margin: 0 auto;
 }
 
 .header-logo-container {
+  display: flex;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  display: flex;
+  justify-content: center;
   align-items: center;
+  width: 33%;
 }
 
 .header-navs-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  position: absolute;
+  align-items: center;
+  width: 33%;
+  margin-right: auto;
 }
 
 .nav-links {
   flex: 0;
-  /* Occupa lo spazio disponibile */
   display: flex;
   align-items: center;
   position: absolute;
 }
 
 ul {
-  display: block;
+  display: flex;
   list-style-type: disc;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
   padding-inline-start: 0;
   unicode-bidi: isolate;
 }
@@ -66,58 +60,70 @@ ul {
 .nav-links ul {
   list-style: none;
   display: flex;
-  gap: 20px;
-
+  gap: 5px;
 }
 
 .nav-links a {
   color: black;
   text-decoration: none;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 14.08px;
+  padding: 5px 10px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+  border-radius: 5px;
 }
 
-.header-icons {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  /* Spinge la lente completamente a destra */
+.nav-links a:hover {
+  background-color: rgba(210, 210, 210, 0.5);
+  border-bottom-color: transparent;
 }
 
-.header-icons button {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 10px;
-  margin-left: auto;
-  cursor: pointer;
+.three-dots-icon {
+  vertical-align: middle;
 }
 
-
-/* Red dot next to "Live" */
 .red-dot {
   display: inline-block;
-  width: 8px;
-  height: 8px;
-  background-color: red;
+  vertical-align: middle;
+  width: 4px;
+  height: 4px;
+  background-color: #b60505;
   border-radius: 50%;
   margin-right: 5px;
+}
+
+.search-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#search-btn {
+  background: none;
+  border: none;
+  padding: 5px 10px; /* Stesso padding delle scritte */
+  cursor: pointer;
+  border-radius: 5px; /* Bordo stondato */
+  transition: background-color 0.2s ease; /* Transizione per lo sfondo */
+}
+
+#search-btn:hover {
+  background-color: rgba(210, 210, 210, 0.5); /* Sfondo grigio chiaro semitrasparente */
 }
 
 /* 9-square grid for burger menu */
 .burger-menu .grid-icon {
   display: grid;
-  grid-template-columns: repeat(3, 8px);
-  grid-gap: 4px;
+  grid-template-columns: repeat(3, 5px);
+  grid-gap: 2px;
 }
 
 .burger-menu .grid-icon span {
   display: block;
-  width: 8px;
-  height: 8px;
+  width: 5px;
+  height: 5px;
   background-color: black;
 }
-
 
 /* Nascondi il burger menu di default */
 .burger-menu {
@@ -136,10 +142,9 @@ ul {
   }
 }
 
-
 @media (max-width: 1015px) {
   .burger-menu {
-    display: block;
+    display: flex;
     /* Mostra il burger menu sotto i 992px */
   }
 
@@ -166,8 +171,6 @@ ul {
     padding: 0;
   }
 }
-
-
 
 /* Hero Section */
 .hero {
