@@ -5,48 +5,50 @@ body {
 }
 
 .cbs-header {
-  position: sticky;
+  position: fixed;
   top: 0;
-  /* Fissa l'header alla parte superiore */
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  /* Sopra la patina grigiastra */
   background-color: #fff;
-  border-bottom: 1px solid #E8E8E8;
+  /* Sfondo bianco per coprire la patina */
+  border-bottom: 1px solid #e8e8e8;
+  /* Linea di separazione */
   height: 64px;
-  max-width: 100%;
+  /* Altezza originale dell'header */
+  box-sizing: border-box;
 }
 
 .header-container {
   display: flex;
+  /*flex-direction: row;*/
   align-items: center;
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  position: relative;
   max-width: 1000px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .header-logo-container {
   display: flex;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   justify-content: center;
   align-items: center;
-  width: 33%;
+  width: auto;
+  z-index: 5;
 }
 
 .header-navs-container {
   display: flex;
   align-items: center;
-  align-items: center;
-  width: 33%;
-  margin-right: auto;
+  justify-content: flex-start;
+  margin-left: 16px;
 }
 
 .nav-links {
   flex: 0;
-  display: flex;
-  align-items: center;
   position: absolute;
 }
 
@@ -60,15 +62,17 @@ ul {
 .nav-links ul {
   list-style: none;
   display: flex;
-  gap: 5px;
+  gap: 3px;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links a {
   color: black;
   text-decoration: none;
   font-weight: bold;
-  font-size: 14px;
-  padding: 5px 10px;
+  font-size: 1rem;
+  padding: 5px 5px;
   border-bottom: 2px solid transparent;
   transition: color 0.2s, border-color 0.2s, background-color 0.2s;
   border-radius: 5px;
@@ -80,7 +84,10 @@ ul {
 }
 
 .three-dots-icon {
+  cursor: pointer;
   vertical-align: middle;
+  z-index: 10;
+  position: relative;
 }
 
 .red-dot {
@@ -90,13 +97,22 @@ ul {
   height: 4px;
   background-color: #b60505;
   border-radius: 50%;
-  margin-right: 5px;
+  margin-right: 0;
+}
+
+.arrow-down {
+  margin-left: -5px;
+  /* Spazio tra il testo e la freccia */
+  vertical-align: middle;
+  /* Allinea la freccia al centro del testo */
+  transition: transform 0.2s ease;
+  /* Animazione per la rotazione */
 }
 
 /* Stile base per il popup */
 .popup {
   position: absolute;
-  top: calc(100% + 16px);
+  top: calc(100% + 9px);
   left: 0;
   display: none;
   /* Nasconde il popup di default */
@@ -105,8 +121,7 @@ ul {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 16px;
-  z-index: 1000;
-  overflow: visible;
+  z-index: 20;
 }
 
 /* Triangolo (becchetto) del popup */
@@ -115,7 +130,7 @@ ul {
   position: absolute;
   top: -16px;
   /* Posiziona il triangolo sopra il popup */
-  left: 20px;
+  left: 7px;
   /* Allinea il triangolo con la scritta */
   border-width: 8px;
   border-style: solid;
@@ -131,7 +146,7 @@ ul {
   position: absolute;
   top: -15px;
   /* Posiziona il triangolo bianco sopra il bordo */
-  left: 20px;
+  left: 7px;
   /* Allinea il triangolo con il lato sinistro del popup */
   border-width: 8px;
   border-style: solid;
@@ -143,6 +158,7 @@ ul {
 
 .nav-links li {
   position: relative;
+  z-index: 10;
 }
 
 /* Area invisibile per agevolare il passaggio */
@@ -180,15 +196,87 @@ ul {
 .popup-content p {
   width: auto;
   margin: 0;
-  font-size: 12px;
+  font-size: 16px;
   color: #333;
   line-height: 1.5;
-  font-weight: bold;
   white-space: nowrap;
   padding: 5px 10px;
   border-radius: 5px;
   transition: background-color 0.2s ease, color 0.2s ease;
   cursor: pointer;
+}
+
+/* Stile specifico per il popup dei tre puntini */
+.three-dots-popup {
+  display: none;
+  /* Nascondi di default */
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 20;
+  width: auto;
+  /* Imposta una larghezza adeguata */
+  padding: 16px;
+  /* Padding interno */
+  box-sizing: border-box;
+  /* Include padding e bordi nella larghezza */
+}
+
+/* Mostra il popup al passaggio del mouse */
+.three-dots-icon:hover+.three-dots-popup,
+.three-dots-popup:hover {
+  display: block;
+  /* Mostra il popup */
+}
+
+/* Wrapper per le colonne */
+.popup-columns-wrapper {
+  display: flex;
+  /* Imposta il layout flex */
+  flex-direction: row;
+  /* Disposizione orizzontale per i due div interni */
+  gap: 16px;
+  /* Spaziatura tra le colonne */
+}
+
+/* Stile per i div interni del popup */
+.popup-content-1,
+.popup-content-2 {
+  display: flex;
+  flex-direction: column;
+  /* Disposizione verticale per i contenuti */
+  gap: 0px;
+  /* Spaziatura tra gli elementi */
+  width: 50%;
+  /* Ogni div occupa metà della larghezza del wrapper */
+  box-sizing: border-box;
+  /* Include padding e bordi nella larghezza */
+}
+
+/* Permetti il ritorno a capo nel popup dei 3 pallini */
+.three-dots-popup p {
+  margin: 0;
+  font-size: 16px;
+  /* Dimensione del font */
+  color: #333;
+  line-height: 1.4;
+  /* Migliora la leggibilità */
+  white-space: nowrap;
+  /* Gestisci parole lunghe */
+  padding: 8px;
+  /* Padding interno */
+  border-radius: 4px;
+  /* Bordo stondato */
+  transition: background-color 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+}
+
+.three-dots-popup p:hover {
+  background-color: rgba(210, 210, 210, 0.5);
+  /* Sfondo al passaggio del mouse */
+  color: #000;
 }
 
 .popup-content p:hover {
@@ -197,25 +285,15 @@ ul {
   /* Colore del testo al passaggio del mouse */
 }
 
-/* Stile per il link */
-.nav-links a {
-  position: relative;
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 14px;
-  padding: 5px 10px;
-  transition: color 0.2s, border-color 0.2s, background-color 0.2s;
-  border-radius: 5px;
-}
-
 .nav-links a:hover {
   background-color: rgba(210, 210, 210, 0.5);
 }
 
-.search-icon {
-  display: inline-block;
-  vertical-align: middle;
+.header-icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 16px;
 }
 
 #search-btn {
@@ -248,32 +326,164 @@ ul {
   background-color: black;
 }
 
-/* Nascondi il burger menu di default */
+/* Contenitore del menu burger */
 .burger-menu {
   display: none;
-  /* Nascondi il burger menu di default */
+  position: relative;
+  width: 40px;
+  height: 40px;
   background: none;
   border: none;
-  font-size: 24px;
   cursor: pointer;
 }
 
-/*
-@media (max-width: 1360px) {
-  .header-container {
-    max-width: 95%;
-  }
-}*/
+/* Icona dei quadratini */
+.grid-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: repeat(3, 4px);
+  grid-gap: 2px;
+  z-index: 1;
+}
+
+/* Icona della croce */
+.close-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  display: none;
+  z-index: 2;
+}
+
+/* Nascondi i quadratini quando il menu è aperto */
+.burger-menu.open .grid-icon {
+  display: none;
+}
+
+/* Mostra la croce quando il menu è aperto */
+.burger-menu.open .close-icon {
+  display: block;
+}
+
+/* Patina grigiastra sullo sfondo */
+.burger-overlay {
+  position: fixed;
+  top: 48px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 64px);
+  /* Altezza totale meno l'altezza dell'header */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Colore grigio semitrasparente */
+  z-index: 999;
+  /* Sopra il contenuto del sito */
+  display: none;
+  /* Nascondi di default */
+}
+
+/* Popup del menu burger */
+.burger-popup {
+  position: fixed;
+  top: 48px;
+  left: 0;
+  width: 320px;
+  /* Larghezza del popup */
+  height: calc(100% - 64px);
+  /* Altezza totale meno l'altezza dell'header */
+  background-color: #fff;
+  /* Sfondo bianco */
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+  /* Ombra laterale */
+  transform: translateX(-100%);
+  /* Posiziona fuori dallo schermo */
+  transition: transform 0.3s ease;
+  /* Transizione per l'animazione */
+  z-index: 1000;
+  /* Sopra la patina grigiastra */
+  overflow-y: scroll;
+  /* Consente lo scorrimento verticale */
+  scrollbar-width: none;
+  display: none;
+  /* Nascondi di default */
+}
+
+/* Mostra il popup con l'animazione */
+.burger-popup.open {
+  display: block; /* Mostra il popup */
+  transform: translateX(0); /* Fai scorrere il popup dentro lo schermo */
+}
+
+/* Mostra l'overlay */
+.burger-overlay.open {
+  display: block; /* Mostra l'overlay */
+}
+
+/* Contenuto del popup */
+.burger-content {
+  padding: 16px 16px 16px 24px;
+}
+
+.section {
+  margin-bottom: 24px;
+  /* Spaziatura tra le sezioni */
+}
+
+/* Titolo della sezione */
+.section-title {
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 14.08px;
+  font-weight: bold;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  color: #000;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+/* Griglia per il contenuto */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* Due colonne di larghezza uguale */
+  column-gap: 16px;
+  /* Spaziatura tra le colonne */
+  row-gap: 8px;
+  /* Spaziatura tra le righe */
+}
+
+.grid-container p {
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 12px;
+  color: #333;
+  white-space: nowrap;
+  padding: 8px 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin: 0;
+}
+
+/* Disabilita lo scorrimento quando il menu burger è aperto */
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
+  /* Impedisce lo scorrimento verticale */
+}
 
 @media (max-width: 1015px) {
-  .cbs-header{
+  .cbs-header {
     height: 48px;
-    width: 94%;
-    margin: 0 auto;
+    margin: 0;
   }
-  .burger-menu {
-    display: flex;
-    /* Mostra il burger menu sotto i 992px */
+
+  .header-container {
+    width: 95%;
   }
 
   .nav-links {
@@ -281,22 +491,13 @@ ul {
     /* Nasconde il nav sotto i 1015px */
   }
 
-  .nav-links.active {
-    display: flex;
-    /* Mostra il nav quando il burger menu è attivo */
-    flex-direction: column;
-    position: absolute;
-    top: 48px;
-    left: 0;
-    background-color: white;
-    width: 100%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  .header-icons {
+    margin-right: -10px;
   }
 
-  .nav-links ul {
-    flex-direction: column;
-    gap: 10px;
-    padding: 0;
+  .burger-menu {
+    display: flex;
+    margin-left: -30px;
   }
 }
 

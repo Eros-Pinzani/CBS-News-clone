@@ -21,11 +21,22 @@
             <span></span><span></span><span></span>
             <span></span><span></span><span></span>
           </div>
+          <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
+            fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
         </button>
+
         <nav class="nav-links" id="nav-links">
           <ul>
             <li>
-              <a href="#">Latest</a>
+              <a href="#">Latest <svg class="arrow-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                  width="14" height="14" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </a>
               <div class="popup">
                 <div class="popup-content">
                   <p>U.S.</p>
@@ -43,7 +54,12 @@
               </div>
             </li>
             <li>
-              <a href="#">Local News</a>
+              <a href="#">Local News <svg class="arrow-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                  width="14" height="14" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </a>
               <div class="popup">
                 <div class="popup-content">
                   <p>Baltimore</p>
@@ -64,7 +80,12 @@
               </div>
             </li>
             <li>
-              <a href="#"><span class="red-dot"></span> Live</a>
+              <a href="#"><span class="red-dot"></span> Live <svg class="arrow-down" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="black" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </a>
               <div class="popup">
                 <div class="popup-content">
                   <p>CBS News 24/7</p>
@@ -88,7 +109,12 @@
               </div>
             </li>
             <li>
-              <a href="#">Shows</a>
+              <a href="#">Shows <svg class="arrow-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                  width="14" height="14" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </a>
               <div class="popup">
                 <div class="popup-content">
                   <p>48 Hours</p>
@@ -105,7 +131,7 @@
                   <p>Sunday Morning</p>
                   <p>CBS Reports</p>
                   <p>The Takeout</p>
-                  <p>CBS Saturday Morning</p>
+                  <p>CBS Saturday <br> Morning</p>
                   <p>The Uplift</p>
                 </div>
               </div>
@@ -113,24 +139,28 @@
             <li>
               <a href="#"><img src="img/3dots.svg" alt="More Options" class="three-dots-icon"
                   style="width: 16px; height: 16px;" /></a>
-              <div class="popup">
-                <div class="popup-content">
-                  <p>CBS News Investigates</p>
-                  <p>Brand Studio</p>
-                  <p>CBS News Confirmed</p>
-                  <p>Paramount+</p>
-                  <p>CBS Village</p>
-                  <p>Join Our Talent Community</p>
-                  <p>Podcasts</p>
-                  <p>Rss Feeds</p>
-                  <p>Newsletters</p>
-                  <p>Davos Interviews</p>
-                  <p>Download Our App</p>
-                  <p>A Moment With...</p>
-                  <p>CBS News Team</p>
-                  <p>Innovators & Disruptors</p>
-                  <p>Executive Team</p>
-                  <p>Economy 4.0</p>
+              <div class="popup three-dots-popup">
+                <div class="popup-columns-wrapper">
+                  <div class="popup-content-1">
+                    <p>CBS News <br> Investigates</p>
+                    <p>CBS News <br> Confirmed</p>
+                    <p>CBS Village</p>
+                    <p>Podcasts</p>
+                    <p>Newsletters</p>
+                    <p>Download Our App</p>
+                    <p>CBS News Team</p>
+                    <p>Executive Team</p>
+                  </div>
+                  <div class="popup-content-2">
+                    <p>Brand Studio</p>
+                    <p>Paramount+</p>
+                    <p>Join Our Talent <br> Community</p>
+                    <p>Rss Feeds</p>
+                    <p>Davos Interviews</p>
+                    <p>A Moment With...</p>
+                    <p>Innovators & <br> Disruptors</p>
+                    <p>Economy 4.0</p>
+                  </div>
                 </div>
               </div>
             </li>
@@ -157,6 +187,106 @@
       </div>
     </div>
   </header>
+
+  <div class="burger-overlay"></div>
+  <div class="burger-popup">
+    <div class="burger-content">
+      <div class="section">
+        <p class="section-title">Latest</p>
+        <div class="grid-container">
+          <p>U.S.</p>
+          <p>MoneyWatch</p>
+          <p>World</p>
+          <p>Crime</p>
+          <p>Politics</p>
+          <p>Space</p>
+          <p>Entertainment</p>
+          <p>Sports</p>
+          <p>HealthWatch</p>
+          <p>Brand Studio</p>
+        </div>
+      </div>
+      <div class="section">
+        <p class="section-title">Local News</p>
+        <div class="grid-container">
+          <p>Baltimore</p>
+          <p>Miami</p>
+          <p>Bay Area</p>
+          <p>Minnesota</p>
+          <p>Boston</p>
+          <p>New York</p>
+          <p>Chicago</p>
+          <p>Philadelphia</p>
+          <p>Colorado</p>
+          <p>Pittsburgh</p>
+          <p>Detroit</p>
+          <p>Sacramento</p>
+          <p>Los Angeles</p>
+          <p>Texas</p>
+        </div>
+      </div>
+      <div class="section">
+        <p class="section-title">Live</p>
+        <div class="grid-container">
+          <p>CBS News 24/7</p>
+          <p>Minnesota</p>
+          <p>Baltimore</p>
+          <p>New York</p>
+          <p>Bay Area</p>
+          <p>Philadelphia</p>
+          <p>Boston</p>
+          <p>Pittsburgh</p>
+          <p>Chicago</p>
+          <p>Sacramento</p>
+          <p>Colorado</p>
+          <p>Texas</p>
+          <p>Detroit</p>
+          <p>48 Hours</p>
+          <p>Los Angeles</p>
+          <p>60 Minutes</p>
+          <p>Miami</p>
+        </div>
+      </div>
+      <div class="section">
+        <p class="section-title">Shows</p>
+        <div class="grid-container">
+          <p>48 Hours</p>
+          <p>The Daily Report</p>
+          <p>60 Minutes</p>
+          <p>The Dish</p>
+          <p>America Decides</p>
+          <p>Eye on America</p>
+          <p>CBS Evening News</p>
+          <p>Face the Nation</p>
+          <p>CBS Mornings</p>
+          <p>Here Comes the Sun</p>
+          <p>CBS Morning News</p>
+          <p>Sunday Morning</p>
+          <p>CBS Reports</p>
+          <p>The Takeout</p>
+          <p>CBS Saturday Morning</p>
+          <p>The Uplift</p>
+        </div>
+      </div>
+      <div class="section">
+        <p class="section-title">CBS News Investigates</p>
+        <p class="section-title">CBS News Confirmed</p>
+        <p class="section-title">CBS Village</p>
+        <p class="section-title">Podcasts</p>
+        <p class="section-title">Newsletters</p>
+        <p class="section-title">Download Our App</p>
+        <p class="section-title">CBS News Team</p>
+        <p class="section-title">Brand Studio</p>
+        <p class="section-title">Paramount+</p>
+        <p class="section-title">Join Our Talent Community</p>
+        <p class="section-title">RSS Feeds</p>
+        <p class="section-title">Davos Interviews</p>
+        <p class="section-title">A Moment With...</p>
+        <p class="section-title">Innovators & Disruptors</p>
+      </div>
+    </div>
+  </div>
+  </div>
 
   <!-- Hero Section -->
   <section class="hero">
