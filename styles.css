@@ -1,8 +1,9 @@
 /* styles.css */
 body {
-  margin: 0;
   font-family: "Proxima Nova", sans-serif;
 }
+
+/*----------------------------------------------------------------------------------HEADER---------------------------------------------------------------------------------------------*/
 
 .cbs-header {
   position: fixed;
@@ -27,7 +28,7 @@ body {
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  max-width: 1000px;
+  max-width: 1320px;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -312,6 +313,8 @@ ul {
   /* Sfondo grigio chiaro semitrasparente */
 }
 
+/*-------------------------------------------------------------------------------BURGER MENU-------------------------------------------------------------------------------------------*/
+
 /* 9-square grid for burger menu */
 .burger-menu .grid-icon {
   display: grid;
@@ -416,13 +419,16 @@ ul {
 
 /* Mostra il popup con l'animazione */
 .burger-popup.open {
-  display: block; /* Mostra il popup */
-  transform: translateX(0); /* Fai scorrere il popup dentro lo schermo */
+  display: block;
+  /* Mostra il popup */
+  transform: translateX(0);
+  /* Fai scorrere il popup dentro lo schermo */
 }
 
 /* Mostra l'overlay */
 .burger-overlay.open {
-  display: block; /* Mostra l'overlay */
+  display: block;
+  /* Mostra l'overlay */
 }
 
 /* Contenuto del popup */
@@ -476,6 +482,8 @@ ul {
   /* Impedisce lo scorrimento verticale */
 }
 
+/*----------------------------------------------------------------------------------@MEDIA---------------------------------------------------------------------------------------------*/
+
 @media (max-width: 1015px) {
   .cbs-header {
     height: 48px;
@@ -498,6 +506,14 @@ ul {
   .burger-menu {
     display: flex;
     margin-left: -30px;
+  }
+}
+
+@media (max-width: 1360px) {
+body {   /*FIX NON BODY MA LE SINGOLE CLASSI NECESSARIE DA RIDIMENASIONARE*/
+    width: 1020px;
+    align-items: center;
+    margin: 0 auto;
   }
 }
 
@@ -578,18 +594,130 @@ ul {
   color: #555;
 }
 
+/*----------------------------------------------------------------------------------FOOTER---------------------------------------------------------------------------------------------*/
+
 /* Footer */
 .footer {
-  background: #111;
+  background: #101010;
+  /* Sfondo nero */
   color: #fff;
+  /* Testo bianco */
+  padding: 40px 20px;
+  /* Spaziatura interna */
   text-align: center;
-  padding: 2rem 1rem;
-  margin-top: 4rem;
+  padding: 40px 0 150px;
 }
 
-.footer-links a {
-  color: #ccc;
+.footer-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo img {
+  width: 200px;
+  /* Dimensione del logo */
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  /* 5 colonne */
+  gap: 25px;
+  text-align: left;
+  align-self: stretch;
+  padding: 0 20px;
+}
+
+.footer-links-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+}
+
+.footer-links-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.footer-links-item {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links-item a {
+  font-size: 1rem;
+  color: #fff;
+  /* Testo grigio chiaro */
   text-decoration: none;
-  margin: 0 1rem;
-  font-size: 0.9rem;
+  margin: 0;
+  padding: 0;
+  display: block;
+  text-align: left;
+}
+
+.footer-links-item a:hover {
+  text-decoration: underline;
+}
+
+.footer-copyright {
+  grid-column: 1 / 2;
+  grid-row: 2;
+  align-self: start;
+  margin-top: 20px;
+  padding: 0 20px;
+  font-size: 14px;
+  color: #ccc;
+  text-align: left;
+}
+
+@media (max-width: 1019px) {
+  .footer-logo img {
+    margin-bottom: 0;
+  }
+
+  .footer-copyright {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-container {
+    padding: 20px;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr;
+    gap: 0;
+    width: 100%;
+  }
+
+  .footer-links-group {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    gap: 15px;
+  }
+
+  .footer-logo img {
+    width: 140px;
+    margin: 0;
+  }
+
+  .footer {
+    padding: 0 0 80px;
+  }
+
+  .footer-copyright {
+    margin-top: 10px;
+    margin-left: 20px;
+  }
 }
