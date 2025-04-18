@@ -1,6 +1,10 @@
 /* styles.css */
 body {
   font-family: "Proxima Nova", sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /*----------------------------------------------------------------------------------HEADER---------------------------------------------------------------------------------------------*/
@@ -484,7 +488,7 @@ ul {
 
 /*----------------------------------------------------------------------------------@MEDIA---------------------------------------------------------------------------------------------*/
 
-@media (max-width: 1015px) {
+@media (max-width: 1019px) {
   .cbs-header {
     height: 48px;
     margin: 0;
@@ -510,10 +514,21 @@ ul {
 }
 
 @media (max-width: 1360px) {
-body {   /*FIX NON BODY MA LE SINGOLE CLASSI NECESSARIE DA RIDIMENASIONARE*/
-    width: 1020px;
-    align-items: center;
+
+  .header-container,
+  .hero,
+  .articles {
+    max-width: 1020px;
     margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .footer-container {
+    max-width: 1020px !important;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
   }
 }
 
@@ -556,9 +571,8 @@ body {   /*FIX NON BODY MA LE SINGOLE CLASSI NECESSARIE DA RIDIMENASIONARE*/
 .articles {
   max-width: 1000px;
   margin: 2rem auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .card {
@@ -606,6 +620,7 @@ body {   /*FIX NON BODY MA LE SINGOLE CLASSI NECESSARIE DA RIDIMENASIONARE*/
   /* Spaziatura interna */
   text-align: center;
   padding: 40px 0 150px;
+  margin-top: auto;
 }
 
 .footer-container {
@@ -614,6 +629,8 @@ body {   /*FIX NON BODY MA LE SINGOLE CLASSI NECESSARIE DA RIDIMENASIONARE*/
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .footer-logo img {
@@ -627,9 +644,10 @@ body {   /*FIX NON BODY MA LE SINGOLE CLASSI NECESSARIE DA RIDIMENASIONARE*/
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   /* 5 colonne */
   gap: 25px;
+  row-gap: 0;
   text-align: left;
   align-self: stretch;
-  padding: 0 20px;
+  padding: 0;
 }
 
 .footer-links-group {
@@ -673,7 +691,7 @@ body {   /*FIX NON BODY MA LE SINGOLE CLASSI NECESSARIE DA RIDIMENASIONARE*/
   grid-row: 2;
   align-self: start;
   margin-top: 20px;
-  padding: 0 20px;
+  padding: 0;
   font-size: 14px;
   color: #ccc;
   text-align: left;
@@ -687,6 +705,7 @@ body {   /*FIX NON BODY MA LE SINGOLE CLASSI NECESSARIE DA RIDIMENASIONARE*/
   .footer-copyright {
     margin-top: 0;
   }
+
 }
 
 @media (max-width: 767px) {
