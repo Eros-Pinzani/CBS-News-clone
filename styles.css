@@ -32,7 +32,7 @@ body {
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  max-width: 1320px;
+  max-width: 1350px;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -43,6 +43,7 @@ body {
   align-items: center;
   width: auto;
   z-index: 5;
+  padding: 0 10px 0 15px;
 }
 
 .header-navs-container {
@@ -67,7 +68,7 @@ ul {
 .nav-links ul {
   list-style: none;
   display: flex;
-  gap: 3px;
+  gap: 5px;
   margin: 0;
   padding: 0;
 }
@@ -298,7 +299,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-right: 16px;
+  margin-right: 20px;
 }
 
 #search-btn {
@@ -310,6 +311,7 @@ ul {
   /* Bordo stondato */
   transition: background-color 0.2s ease;
   /* Transizione per lo sfondo */
+  padding: 0 5px 0 0;
 }
 
 #search-btn:hover {
@@ -486,51 +488,62 @@ ul {
   /* Impedisce lo scorrimento verticale */
 }
 
-/*----------------------------------------------------------------------------------@MEDIA---------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------ UNDER HEADER ---------------------------------------------------------------------------*/
 
-@media (max-width: 1019px) {
-  .cbs-header {
-    height: 48px;
-    margin: 0;
-  }
-
-  .header-container {
-    width: 95%;
-  }
-
-  .nav-links {
-    display: none;
-    /* Nasconde il nav sotto i 1015px */
-  }
-
-  .header-icons {
-    margin-right: -10px;
-  }
-
-  .burger-menu {
-    display: flex;
-    margin-left: -30px;
-  }
+.under-header {
+  background-color: #fff;
+  border-bottom: 1px solid #e8e8e8;
+  margin-top: 64px;
+  /* spazio sotto l'header fisso */
+  height: 45px;
+  display: flex;
+  align-items: center;
 }
 
-@media (max-width: 1360px) {
-
-  .header-container,
-  .hero,
-  .articles {
-    max-width: 1020px;
-    margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-  }
-
-  .footer-container {
-    max-width: 1020px !important;
-    margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-  }
+.under-header-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
+
+.under-header-navs {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.under-header-navs ul {
+  display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  gap: 6px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.under-header-item a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  transition: color 0.2s;
+  padding: 0 8px;
+}
+
+.under-header-item a:hover {
+  color: #0072c3;
+}
+
+
+/*---------------------------------------------------------------------------- BODY -------------------------------------------------------------------------------*/
 
 /* Hero Section */
 .hero {
@@ -697,16 +710,7 @@ ul {
   text-align: left;
 }
 
-@media (max-width: 1019px) {
-  .footer-logo img {
-    margin-bottom: 0;
-  }
-
-  .footer-copyright {
-    margin-top: 0;
-  }
-
-}
+/*----------------------------------------------------------------------------------@MEDIA---------------------------------------------------------------------------------------------*/
 
 @media (max-width: 767px) {
   .footer-container {
@@ -738,5 +742,68 @@ ul {
   .footer-copyright {
     margin-top: 10px;
     margin-left: 20px;
+  }
+}
+
+@media (max-width: 1019px) {
+  .cbs-header {
+    height: 48px;
+    margin: 0;
+  }
+
+  .header-container {
+    width: 95%;
+  }
+
+  .nav-links {
+    display: none;
+    /* Nasconde il nav sotto i 1015px */
+  }
+
+  .header-icons {
+    margin-right: -10px;
+  }
+
+  .burger-menu {
+    display: flex;
+    margin-left: -30px;
+  }
+
+  .under-header {
+    margin-top: 48px;
+  }
+
+  .footer-logo img {
+    margin-bottom: 0;
+  }
+
+  .footer-copyright {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 1360px) {
+
+  .header-container,
+  .hero,
+  .articles {
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .under-header-container {
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 0 8px 0 35px;
+    box-sizing: border-box;
+  }
+
+  .footer-container {
+    max-width: 1020px !important;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
   }
 }
