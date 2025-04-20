@@ -545,82 +545,148 @@ ul {
 
 /*---------------------------------------------------------------------------- BODY -------------------------------------------------------------------------------*/
 
-/* Hero Section */
-.hero {
-  max-width: 1000px;
-  margin: 2rem auto;
-  background: #fff;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+/* Contenitore principale della sezione */
+.section-a-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Quattro colonne di larghezza uguale */
+  grid-template-rows: 168px repeat(6, auto); /* La prima riga alta quanto la live, le altre sei si adattano agli articoli minori */
+  gap: 25px 40px; /* Spaziatura tra gli elementi */
+  max-width: 1320px; /* Larghezza massima */
+  margin: 0 auto; /* Centra il contenitore */
+  padding: 40px 0; /* Spaziatura interna */
+  align-items: start; /* Allinea gli elementi in alto */
 }
 
-.hero img {
-  width: 100%;
-  border-radius: 6px;
-}
-
-.hero-text {
-  margin-top: 1rem;
-}
-
-.hero-text h1 {
-  font-size: 2rem;
-  color: #222;
-}
-
-.author {
-  color: #666;
-  font-size: 0.9rem;
-  margin: 0.5rem 0;
-}
-
-.summary {
-  font-size: 1rem;
-  color: #333;
-}
-
-/* Articles */
-.articles {
-  max-width: 1000px;
-  margin: 2rem auto;
+/* Articolo principale */
+.article-item:nth-child(1) {
+  grid-column: 1 / 4; /* Occupa le prime tre colonne */
+  grid-row: 1 / 5; /* Occupa le prime quattro righe */
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row-reverse; /* Immagine a destra */
+  gap: 20px; /* Spaziatura tra immagine e testo */
+  align-items: flex-start; /* Allinea gli elementi in alto */
+  height: 494.38px; /* Mantiene la sua altezza naturale */
+  overflow: visible; /* Assicura che il contenuto non venga tagliato */
 }
 
-.card {
-  background: #fff;
-  border-radius: 6px;
-  overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.article-item img {
+  margin: 0;
+  padding: 0;
 }
 
-.card img {
-  width: 100%;
-  display: block;
+/* Live box accanto all'articolo principale */
+.live {
+  grid-column: 4 / 5; /* Occupa la quarta colonna */
+  grid-row: 1 / 2; /* Occupa solo la prima riga */
+  height: 168px; /* Altezza fissa */
+  width: 300px;
+  display: flex;
+  justify-content: center; /* Centra il contenuto orizzontalmente */
+  align-items: center; /* Centra il contenuto verticalmente */
+  background-color: #f4f4f4; /* Sfondo grigio chiaro */
+  overflow: hidden; /* Nasconde eventuali contenuti in eccesso */
+  margin: 0 auto;
 }
 
-.card-text {
-  padding: 1rem;
+/* Stile per la figure della live */
+.live figure {
+  width: 100%; /* Occupa tutta la larghezza del contenitore */
+  height: 100%; /* Occupa tutta l'altezza del contenitore */
+  margin: 0; /* Rimuove margini predefiniti */
+  display: flex;
+  justify-content: center; /* Centra il contenuto orizzontalmente */
+  align-items: center; /* Centra il contenuto verticalmente */
 }
 
-.category {
-  font-size: 0.75rem;
+/* Stile per l'immagine all'interno della live */
+.live img {
+  width: 100%; /* L'immagine occupa tutta la larghezza della figure */
+  height: 100%; /* L'immagine occupa tutta l'altezza della figure */
+  object-fit: cover; /* Adatta l'immagine senza distorsioni */
+}
+
+/* Articoli 2 e 3 sotto al principale */
+.article-item:nth-child(2) {
+  grid-column: 1 / 2; /* Occupa la prima colonna */
+  grid-row: 5 / 8; /* Occupa le ultime tre righe */
+}
+
+.article-item:nth-child(3) {
+  grid-column: 2 / 3; /* Occupa la seconda colonna */
+  grid-row: 5 / 8; /* Occupa le ultime tre righe */
+}
+
+/* Ad accanto agli articoli 2 e 3 */
+.ad-container {
+  grid-column: 3 / 4; /* Occupa la terza colonna */
+  grid-row: 5 / 8; /* Occupa le ultime tre righe */
+  height: 100%; /* Altezza basata sul contenuto */
+  display: flex;
+  justify-content: center; /* Centra il contenuto orizzontalmente */
+  align-items: center; /* Centra il contenuto verticalmente */
+  overflow: hidden; /* Nasconde eventuali contenuti in eccesso */
+}
+
+/* Articoli minori sotto la live */
+.article-item:nth-child(n+4) {
+  grid-column: 4 / 5; /* Posizionati nella quarta colonna */
+  grid-row: auto; /* Si adattano automaticamente */
+  display: flex;
+  flex-direction: row; /* Layout orizzontale: immagine a sinistra, testo a destra */
+  align-items: flex-start; /* Allinea gli elementi in alto */
+  margin: 0; /* Rimuove margini verticali */
+}
+
+.article-item:nth-child(n+4) .title-container {
+  font-size: 17.12px;
+}
+
+.article-item:nth-child(n+4) h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 17.12px; /* Dimensione del titolo */
+}
+
+/* Nascondi le immagini degli articoli secondari */
+.article-item:nth-child(n+4) img {
+  display: none; /* Nasconde le immagini */
+}
+
+/* Rimuovi i pallini dai <li> della sezione specifica */
+.section-a-container li {
+  font-size: 11.04px;
+  list-style: none; /* Rimuove i pallini */
+  margin: 0 15px 0 0;
+  color: #101010;
+}
+
+.section-a-container h4 {
+  font-family: "Publico Headline", serif;
+}
+
+.article-item:nth-child(1) h4 {
+  font-size: 32px;
+  line-height: 1;
   font-weight: bold;
-  text-transform: uppercase;
-  color: #0056b3;
+  margin: 0 0 10px;
+  color: #101010;
 }
 
-.card-text h2 {
-  font-size: 1.2rem;
-  margin: 0.5rem 0;
+.article-item:nth-child(1) p {
+  font-size: 18.08px;
+  line-height: 1.23;
+  margin: 10px 0;
+  color: #101010;
 }
 
-.card-text p {
-  font-size: 0.95rem;
-  color: #555;
+.article-item:nth-child(2) h4,
+.article-item:nth-child(3) h4 {
+  font-size: 24px;
+  line-height: 1;
+  font-weight: bold;
+  margin: 0 0 10px;
+  color: #101010;
 }
-
 /*----------------------------------------------------------------------------------FOOTER---------------------------------------------------------------------------------------------*/
 
 /* Footer */
