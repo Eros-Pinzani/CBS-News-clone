@@ -658,7 +658,7 @@ ul {
 }
 
 /* Ad accanto agli articoli 2 e 3 */
-.ad-container {
+.section-a-container .ad-container {
   grid-column: 3 / 4;
   /* Occupa la terza colonna */
   grid-row: 5 / 8;
@@ -1239,11 +1239,6 @@ ul {
     /* Imposta la dimensione del font per titoli e paragrafi */
   }
 
-  .live {
-    margin-bottom: 20px;
-    /* Aggiunge spazio sotto la live */
-  }
-
   .section-a-container .article-item:nth-child(n+2) h4 {
     margin: 0 0 10px;
   }
@@ -1330,7 +1325,7 @@ ul {
 }
 
 /* Ad accanto agli articoli 2 e 3 */
-.ad-container {
+.section-b-container .ad-container {
   grid-column: 3 / 4;
   /* Occupa la terza colonna */
   grid-row: 5 / 7;
@@ -1784,6 +1779,922 @@ ul {
 
   .section-b-container .article-item:nth-child(n+2) h4 {
     margin: 0 0 10px;
+  }
+}
+
+
+/*-------------------------------------------------SECTION C-----------------------------------------------------------------*/
+
+.section-c-wrapper {
+  width: 100%;
+  /* Occupa tutta la larghezza visibile */
+  border-bottom: 1px solid #e8e8e8;
+  /* Riga dello stesso colore e spessore di quella sotto gli header */
+  margin-top: 40px;
+}
+
+.section-c-title {
+  display: flex;
+  align-items: flex-end;
+  /* Allinea il titolo e "More" in basso */
+  gap: 10px;
+  /* Spaziatura tra il titolo e "More" */
+  margin: 0 auto;
+  max-width: 1320px;
+}
+
+.section-c-title h3 {
+  font-family: "Publico Headline", serif;
+  font-size: 56px;
+  font-weight: 900;
+  letter-spacing: -1.2px;
+  margin-top: 0;
+  margin-bottom: 42px;
+}
+
+.section-c-title .more {
+  font-size: 15.04px;
+  /* Dimensione del testo */
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  /* Riduce la spaziatura tra il testo e la freccia */
+  text-decoration: none;
+  color: black;
+  position: relative;
+  /* Permette di regolare la posizione */
+  top: -48px;
+  /* Sposta leggermente verso l'alto */
+}
+
+.section-c-title .more .arrow-right {
+  stroke: black;
+  /* Colore della freccia */
+  width: 16px;
+  /* Riduce leggermente la dimensione della freccia */
+  height: 16px;
+}
+
+.load-more-btn {
+  display: none;
+}
+
+.section-c-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* Quattro colonne di larghezza uguale */
+  grid-template-rows: repeat(3, auto);
+  /* La prima riga alta quanto la live, le altre sei si adattano agli articoli minori */
+  gap: 40px 40px;
+  /* Spaziatura tra gli elementi */
+  max-width: 1320px;
+  /* Larghezza massima */
+  margin: 0 auto;
+  /* Centra il contenitore */
+  padding: 0 0 40px 0;
+  /* Spaziatura interna */
+  align-items: start;
+  /* Allinea gli elementi in alto */
+}
+
+/* Articolo principale */
+.section-c-container .article-item:nth-child(1) {
+  grid-column: 1 / 4;
+  /* Occupa le prime tre colonne */
+  grid-row: 1 / 3;
+  /* Occupa solo le prime due righe */
+  display: flex;
+  flex-direction: row-reverse;
+  /* Immagine a destra */
+  gap: 20px;
+  /* Spaziatura tra immagine e testo */
+  align-items: flex-start;
+  /* Allinea gli elementi in alto */
+  height: 440px;
+  /* Altezza adattata al contenuto */
+  overflow: visible;
+  /* Assicura che il contenuto non venga tagliato */
+}
+
+.section-c-container .article-item img {
+  margin: 0;
+  padding: 0;
+}
+
+/* Articoli 2 e 3 sotto al principale */
+.section-c-container .article-item:nth-child(2) {
+  grid-column: 1 / 2;
+  /* Occupa la prima colonna */
+  grid-row: 3 / 4;
+  /* Occupa le ultime tre righe */
+}
+
+.section-c-container .article-item:nth-child(3) {
+  grid-column: 2 / 3;
+  /* Occupa la seconda colonna */
+  grid-row: 3 / 4;
+  /* Occupa le ultime tre righe */
+}
+
+.section-c-container .article-item:nth-child(5) {
+  grid-column: 3 / 4;
+  /* Occupa la seconda colonna */
+  grid-row: 3 / 4;
+  /* Occupa le ultime tre righe */
+}
+
+.section-c-container .article-item:nth-child(6) {
+  grid-column: 4 / 5;
+  /* Occupa la seconda colonna */
+  grid-row: 1 / 3;
+  /* Occupa le ultime tre righe */
+}
+
+/* Ad accanto agli articoli 2 e 3 */
+.section-c-container .ad-container {
+  grid-column: 4 / 5;
+  /* Occupa la terza colonna */
+  grid-row: 3 / 4;
+  /* Occupa le ultime tre righe */
+  height: 100%;
+  /* Altezza basata sul contenuto */
+  display: flex;
+  justify-content: center;
+  /* Centra il contenuto orizzontalmente */
+  align-items: center;
+  /* Centra il contenuto verticalmente */
+  overflow: hidden;
+  /* Nasconde eventuali contenuti in eccesso */
+}
+
+
+/* Rimuovi i pallini dai <li> della sezione specifica */
+.section-c-container li {
+  font-size: 11.04px;
+  list-style: none;
+  /* Rimuove i pallini */
+  margin: 0 15px 0 0;
+  color: #101010;
+}
+
+.section-c-container h4 {
+  font-family: "Publico Headline", serif;
+}
+
+.section-c-container .article-item:nth-child(1) h4 {
+  font-size: 32px;
+  line-height: 1;
+  font-weight: bold;
+  margin: 0 0 10px;
+  color: #101010;
+}
+
+.section-c-container .article-item:nth-child(1) p {
+  font-size: 18.08px;
+  line-height: 1.23;
+  margin: 10px 0;
+  color: #101010;
+}
+
+.section-c-container .article-item:nth-child(2) h4,
+.section-c-container .article-item:nth-child(3) h4,
+.section-c-container .article-item:nth-child(5) h4,
+.section-c-container .article-item:nth-child(6) h4 {
+  font-size: 24px;
+  line-height: 1;
+  font-weight: bold;
+  margin: 0 0 10px;
+  color: #101010;
+}
+
+/* Sottolinea il titolo dell'articolo principale solo quando si passa sopra immagine, paragrafo o titolo */
+.section-c-container .article-item:hover h4 {
+  text-decoration: underline;
+  /* Aggiunge la sottolineatura */
+}
+
+.section-c-container .article-item:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 1360px) {
+  .section-c-title {
+    margin-left: auto;
+    /* Aggiunge spaziatura per allineare il titolo */
+    max-width: 1020px;
+    /* Allinea il titolo con il contenitore */
+  }
+
+  .section-c-title h3 {
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-size: 45.12px;
+  }
+
+  .section-c-title .more {
+    top: -5px;
+    /* Sposta leggermente verso l'alto */
+  }
+
+  .section-c-container {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    /* Tre colonne di larghezza uguale */
+    grid-template-rows: repeat(3, 281.73px);
+    /* Prima riga alta 168px, 6 righe auto, ultima riga auto */
+    gap: 40px 40px;
+    /* Spaziatura tra gli elementi */
+    max-width: 1020px;
+    /* Larghezza massima */
+    margin: 0 auto;
+    /* Centra il contenitore */
+    padding: 30px 20px 40px 20px;
+    /* Spaziatura interna */
+    box-sizing: border-box;
+  }
+
+  /* Articolo principale */
+  .section-c-container .article-item:nth-child(1) {
+    grid-column: 1 / 3;
+    /* Occupa le prime due colonne */
+    grid-row: 1 / 3;
+    /* Occupa le prime 2 righe */
+    display: flex;
+    flex-direction: column;
+    /* Disposizione verticale */
+    gap: 10px;
+    /* Spaziatura tra immagine, titolo, paragrafo e ora */
+  }
+
+  .section-c-container .article-item:nth-child(1) img {
+    width: 100%;
+    /* L'immagine occupa tutta la larghezza disponibile */
+    height: auto;
+    /* Mantiene le proporzioni */
+  }
+
+  .section-c-container .article-item:nth-child(1) h4,
+  .section-c-container .article-item:nth-child(1) p,
+  .section-c-container .article-item:nth-child(1) .time {
+    text-align: left;
+    /* Allinea il testo a sinistra */
+  }
+
+  .section-c-container .article-item:nth-child(1) h4 {
+    margin-top: 0;
+    padding: 0 0 2px 6.88px;
+  }
+
+  .section-c-container .article-item:nth-child(1) p {
+    margin: 20px 0 10px;
+  }
+
+  /* Articoli secondari */
+  .section-c-container .article-item:nth-child(2) {
+    grid-column: 1 / 2;
+    /* Occupa la prima colonna */
+    grid-row: 3 / 4;
+    /* Occupa l'ultima riga */
+  }
+
+  .section-c-container .article-item:nth-child(3) {
+    grid-column: 2 / 3;
+    /* Occupa la seconda colonna */
+    grid-row: 3 / 4;
+    /* Occupa l'ultima riga */
+  }
+
+  .section-c-container .article-item:nth-child(5) {
+    grid-column: 3 / 4;
+    /* Occupa la seconda colonna */
+    grid-row: 1 / 2;
+    /* Occupa l'ultima riga */
+  }
+
+  .section-c-container .article-item:nth-child(6) {
+    grid-column: 3 / 4;
+    /* Occupa la seconda colonna */
+    grid-row: 2 / 3;
+    /* Occupa l'ultima riga */
+  }
+
+  .section-c-container .article-item:nth-child(2) h4,
+  .section-c-container .article-item:nth-child(3) h4 {
+    margin-top: 10px;
+  }
+
+  /* Ad accanto agli articoli secondari */
+  .section-c-container .ad-container {
+    grid-column: 3 / 4;
+    /* Occupa la terza colonna */
+    grid-row: 3 / 4;
+    /* Occupa l'ultima riga */
+  }
+
+  .section-c-container ul {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 1020px) {
+  .section-c-title {
+    margin-left: 0;
+    padding-left: 20px;
+    /* Aggiunge spaziatura per allineare il titolo */
+  }
+
+  .section-c-title h3 {
+    padding-left: 0;
+    font-size: 32px;
+  }
+
+  .section-c-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Due colonne di larghezza uguale */
+    grid-template-rows: repeat(4, auto);
+    /* Otto righe con altezza adattata al contenuto */
+    grid-gap: 20px;
+    /* Spaziatura tra gli elementi */
+    max-width: 100%;
+    /* Larghezza massima */
+    margin: 0 auto;
+    /* Centra il contenitore */
+    padding: 20px;
+    /* Spaziatura interna */
+    align-items: start;
+  }
+
+  /* Articolo principale */
+  .section-c-container .article-item:nth-child(1) {
+    grid-column: 1 / 2;
+    /* Occupa la prima colonna */
+    grid-row: 1 / 2;
+    /* Occupa la prima riga */
+    display: flex;
+    flex-direction: column;
+    /* Disposizione verticale */
+    gap: 0;
+    /* Rimuove lo spazio tra immagine, titolo e ora */
+    height: auto;
+  }
+
+  .section-c-container .article-item:nth-child(1) p {
+    display: none;
+    /* Nasconde il paragrafo */
+  }
+
+  .section-c-container .article-item:nth-child(1) h4 {
+    font-size: 17.12px;
+    /* Dimensione del font */
+    margin: 5px 0;
+    /* Riduce il margine sopra e sotto */
+    padding: 0;
+  }
+
+  .section-c-container .ad-container {
+    grid-column: 2 / 3;
+    /* Sposta l'ad nella seconda colonna */
+    grid-row: 1 / 2;
+    /* Sposta l'ad nella prima riga */
+  }
+
+  .section-c-container .article-item:nth-child(2) {
+    grid-column: 1 / 2;
+    /* Posiziona nella prima colonna */
+    grid-row: 4 / 5;
+    /* Posiziona nella terza riga */
+    display: flex;
+    flex-direction: row-reverse;
+    /* Disposizione verticale */
+    gap: 5px;
+    /* Spaziatura tra titolo e ora */
+  }
+
+  .section-c-container .article-item:nth-child(3) {
+    grid-column: 2 / 3;
+    /* Posiziona nella seconda colonna */
+    grid-row: 4 / 5;
+    /* Posiziona nella terza riga */
+    display: flex;
+    flex-direction: row-reverse;
+    /* Disposizione verticale */
+    gap: 5px;
+    /* Spaziatura tra titolo e ora */
+  }
+
+  .section-c-container .article-item:nth-child(2) h4,
+  .section-c-container .article-item:nth-child(3) h4,
+  .section-c-container .article-item:nth-child(5) h4,
+  .section-c-container .article-item:nth-child(6) h4 {
+    font-size: 17.12px;
+    /* Dimensione del font */
+    margin: 5px 0;
+    /* Margine sopra e sotto */
+  }
+
+  .section-c-container .article-item:nth-child(5) {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .section-c-container .article-item:nth-child(6) {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  /* Immagine dell'articolo principale */
+  .section-c-container .article-item:nth-child(1) img {
+    width: 100%;
+    max-width: 480px;
+    /* Larghezza massima */
+    max-height: 270px;
+    /* Altezza massima */
+    min-width: 354px;
+    /* Larghezza minima */
+    min-height: 200px;
+    /* Altezza minima */
+    object-fit: cover;
+    /* Adatta l'immagine senza distorsioni */
+  }
+}
+
+@media (max-width: 768px) {
+  .section-c-title {
+    margin-left: 0;
+    padding-left: 20px;
+    /* Aggiunge spaziatura per allineare il titolo */
+  }
+
+  .section-c-title h3 {
+    padding-left: 0;
+    font-size: 24px;
+  }
+
+  .section-c-title .more {
+    display: none; /* Nasconde la scritta "More" e la freccia */
+  }
+
+  .section-c-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Una sola colonna */
+    grid-template-rows: repeat(9, auto);
+    /* Dieci righe con altezza adattata al contenuto */
+    grid-gap: 0;
+    /* Spaziatura tra gli elementi */
+    max-width: 100%;
+    /* Larghezza massima */
+    margin: 0 auto;
+    /* Centra il contenitore */
+    padding: 10px 20px 20px 20px;
+    /* Spaziatura interna */
+    box-sizing: border-box;
+    position: relative; /* Necessario per posizionare il bottone */
+  }
+
+  /* Articolo principale nella prima riga */
+  .section-c-container .article-item:nth-child(1) {
+    grid-column: 1 / 2;
+    /* Occupa la prima colonna */
+    grid-row: 1 / 2;
+    /* Occupa la prima riga */
+    display: flex;
+    flex-direction: column;
+    /* Disposizione verticale */
+    gap: 10px;
+    /* Spaziatura tra immagine, titolo e ora */
+    height: auto;
+    /* Altezza adattata al contenuto */
+  }
+
+  /* Nascondi l'ad */
+  .section-c-container .ad-container {
+    display: none;
+    /* Nasconde l'ad */
+  }
+
+  /* Articoli minori dalla quinta riga in poi */
+  .section-c-container .article-item:nth-child(n+2) {
+    grid-column: 1 / 2;
+    /* Occupa la prima colonna */
+    grid-row: auto;
+    /* Si adatta automaticamente alle righe successive */
+    display: flex;
+    flex-direction: row-reverse;
+    /* Inverte l'ordine: immagine a destra, testo a sinistra */
+    align-items: center;
+    /* Allinea verticalmente immagine e testo */
+    gap: 10px;
+    /* Spaziatura tra immagine e testo */
+    justify-content: space-between;
+  }
+
+  .section-c-container .article-item:nth-child(1) img {
+    width: 100%;
+    max-width: 728px;
+    /* Larghezza massima */
+    max-height: 410px;
+    /* Altezza massima */
+    object-fit: cover;
+    /* Adatta l'immagine senza distorsioni */
+  }
+
+  .section-c-container .article-item:nth-child(2),
+  .section-c-container .article-item:nth-child(3),
+  .section-c-container .article-item:nth-child(5),
+  .section-c-container .article-item:nth-child(6) {
+    margin-bottom: 0;
+  }
+
+  /* Mostra le immagini degli articoli minori */
+  .section-c-container .article-item:nth-child(n+2) img {
+    display: block;
+    /* Rendi visibili le immagini */
+    width: 90px;
+    /* Adatta l'immagine alla larghezza del contenitore */
+    height: auto;
+    /* Mantiene le proporzioni */
+    max-width: 90px;
+    /* Larghezza massima */
+    max-height: 90px;
+    /* Altezza massima */
+    object-fit: cover;
+    /* Adatta l'immagine senza distorsioni */
+    margin-bottom: 10px;
+    /* Spaziatura sotto l'immagine */
+  }
+
+  .section-c-container .article-item {
+    margin-bottom: 20px;
+    /* Aggiunge spazio verticale tra gli articoli */
+    font-size: 17.12px;
+    /* Imposta la dimensione del font per tutti gli articoli */
+  }
+
+  .section-c-container .article-item h4 {
+    font-size: 17.12px;
+    /* Imposta la dimensione del font per titoli e paragrafi */
+  }
+
+  .section-c-container .article-item:nth-child(n+2) h4 {
+    margin: 0 0 10px;
+  }
+
+  .section-c-container .load-more-btn {
+    display: inline-flex; /* Rende visibile il bottone */
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+    margin: 20px 0 0; /* Centra il bottone sotto gli articoli */
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+    background-color: #ffff;
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-sizing: border-box;
+  }
+
+  .section-c-container .load-more-btn .arrow-right {
+    stroke: black; /* Colore della freccia */
+    width: 14px;
+    height: 14px;
+    vertical-align: middle; /* Allinea la freccia al centro del testo */
+  }
+}
+
+/*-------------------------------------------------SECTION D-----------------------------------------------------------------*/
+
+.section-d {
+  padding: 40px 0;
+}
+
+.section-d-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* Quattro colonne di larghezza uguale */
+  gap: 40px 40px;
+  /* Spaziatura tra gli elementi */
+  max-width: 1320px;
+  /* Larghezza massima */
+  margin: 0 auto;
+  /* Centra il contenitore */
+  padding: 0 0 40px 0;
+  /* Spaziatura interna */
+  align-items: start;
+  /* Allinea gli elementi in alto */
+}
+
+/* Articolo principale */
+.section-d-container .article-item:nth-child(1) {
+  grid-column: 1 / 2;
+  /* Occupa le prime tre colonne */
+  display: flex;
+  flex-direction: row-reverse;
+  /* Immagine a destra */
+  gap: 20px;
+  /* Spaziatura tra immagine e testo */
+  align-items: flex-start;
+  /* Allinea gli elementi in alto */
+  overflow: visible;
+  /* Assicura che il contenuto non venga tagliato */
+}
+
+.section-d-container .article-item img {
+  margin: 0;
+  padding: 0;
+}
+
+/* Articoli 2 e 3 sotto al principale */
+.section-d-container .article-item:nth-child(2) {
+  grid-column: 2 / 3;
+  /* Occupa la prima colonna */
+  display: flex;
+  flex-direction: row-reverse;
+  /* Immagine a destra */
+  gap: 20px;
+  /* Spaziatura tra immagine e testo */
+  align-items: flex-start;
+  /* Allinea gli elementi in alto */
+  overflow: visible;
+  /* Assicura che il contenuto non venga tagliato */
+}
+
+.section-d-container .article-item:nth-child(3) {
+  grid-column: 3 / 4;
+  /* Occupa la seconda colonna */
+  display: flex;
+  flex-direction: row-reverse;
+  /* Immagine a destra */
+  gap: 20px;
+  /* Spaziatura tra immagine e testo */
+  align-items: flex-start;
+  /* Allinea gli elementi in alto */
+  overflow: visible;
+  /* Assicura che il contenuto non venga tagliato */
+}
+
+/* Rimuovi i pallini dai <li> della sezione specifica */
+.section-d-container li {
+  font-size: 11.04px;
+  list-style: none;
+  /* Rimuove i pallini */
+  margin: 0 15px 0 0;
+  color: #101010;
+}
+
+.section-d-container h4 {
+  font-family: "Publico Headline", serif;
+}
+
+.section-d-container .article-item:nth-child(1) p,
+.section-d-container .article-item:nth-child(2) p,
+.section-d-container .article-item:nth-child(3) p {
+  font-size: 18.08px;
+  line-height: 1.23;
+  margin: 10px 0;
+  color: #101010;
+}
+
+.section-d-container .article-item:nth-child(1) h4,
+.section-d-container .article-item:nth-child(2) h4,
+.section-d-container .article-item:nth-child(3) h4 {
+  font-size: 24px;
+  line-height: 1;
+  font-weight: bold;
+  margin: 0 0 10px;
+  color: #101010;
+}
+
+/* Sottolinea il titolo dell'articolo principale solo quando si passa sopra immagine, paragrafo o titolo */
+.section-d-container .article-item:hover h4 {
+  text-decoration: underline;
+  /* Aggiunge la sottolineatura */
+}
+
+.section-d-container .article-item:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 1360px) {
+  .section-c-title {
+    margin-left: auto;
+    /* Aggiunge spaziatura per allineare il titolo */
+    max-width: 1020px;
+    /* Allinea il titolo con il contenitore */
+  }
+
+  .section-c-title h3 {
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-size: 45.12px;
+  }
+
+  .section-c-title .more {
+    top: -5px;
+    /* Sposta leggermente verso l'alto */
+  }
+
+  .section-d-container {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    /* Tre colonne di larghezza uguale */
+    gap: 40px;
+    /* Spaziatura tra gli elementi */
+    max-width: 1020px;
+    /* Larghezza massima */
+    margin: 0 auto;
+    /* Centra il contenitore */
+    padding: 30px 20px 40px 20px;
+    /* Spaziatura interna */
+    box-sizing: border-box;
+  }
+
+  .section-d-container .article-item:nth-child(1) {
+    grid-column: 1 / 2;
+    /* Occupa le prime due colonne */
+    display: flex;
+    flex-direction: row-reverse;
+    /* Disposizione verticale */
+    gap: 10px;
+    /* Spaziatura tra immagine, titolo, paragrafo e ora */
+  }
+
+  .section-d-container .article-item:nth-child(2) {
+    grid-column: 2 / 3;
+    /* Occupa le prime due colonne */
+    display: flex;
+    flex-direction: row-reverse;
+    /* Disposizione verticale */
+    gap: 10px;
+    /* Spaziatura tra immagine, titolo, paragrafo e ora */
+  }
+
+  .section-d-container .article-item:nth-child(3) {
+    grid-column: 3 / 4;
+    /* Occupa le prime due colonne */
+    display: flex;
+    flex-direction: row-reverse;
+    /* Disposizione verticale */
+    gap: 10px;
+    /* Spaziatura tra immagine, titolo, paragrafo e ora */
+  }
+
+  .section-d-container .article-item h4 {
+    font-size: 17.12px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .section-d-container .article-item p {
+    display: -webkit-box; /* Usa un box flessibile */
+    -webkit-line-clamp: 4; /* Mostra solo 4 righe */
+    -webkit-box-orient: vertical; /* Orienta il box verticalmente */
+    overflow: hidden; /* Nasconde il testo in eccesso */
+    text-overflow: ellipsis; /* Aggiunge "..." al testo tagliato */
+    white-space: normal; /* Permette il ritorno a capo */
+  }
+}
+
+@media (max-width: 1020px) {
+  .section-c-title {
+    margin-left: 0;
+    padding-left: 20px;
+    /* Aggiunge spaziatura per allineare il titolo */
+  }
+
+  .section-c-title h3 {
+    padding-left: 0;
+    font-size: 32px;
+  }
+
+  .section-d-container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    /* Tre colonne di larghezza uguale */
+    gap: 20px;
+    /* Spaziatura tra gli elementi */
+    max-width: 100%;
+    /* Larghezza massima */
+    margin: 0 auto;
+    /* Centra il contenitore */
+    padding: 30px 20px 40px 20px;
+    /* Spaziatura interna */
+    box-sizing: border-box;
+  }
+
+  .section-d-container .article-item:nth-child(1) {
+    grid-column: 1 / 2;
+    /* Occupa le prime due colonne */
+    display: flex;
+    flex-direction: row-reverse;
+    /* Disposizione verticale */
+    gap: 10px;
+    /* Spaziatura tra immagine, titolo, paragrafo e ora */
+  }
+
+  .section-d-container .article-item:nth-child(2) {
+    grid-column: 2 / 3;
+    /* Occupa le prime due colonne */
+    display: flex;
+    flex-direction: row-reverse;
+    /* Disposizione verticale */
+    gap: 10px;
+    /* Spaziatura tra immagine, titolo, paragrafo e ora */
+  }
+
+  .section-d-container .article-item:nth-child(3) {
+    grid-column: 3 / 4;
+    /* Occupa le prime due colonne */
+    display: flex;
+    flex-direction: row-reverse;
+    /* Disposizione verticale */
+    gap: 10px;
+    /* Spaziatura tra immagine, titolo, paragrafo e ora */
+  }
+
+  .section-d-container .article-item h4 {
+    margin-bottom: 10px !important;
+  }
+
+  .section-d-container .article-item p {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-c-title h3{
+    font-size: 24px;
+  }
+    
+  .section-d-container {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    gap: 0;
+    /* Spaziatura tra gli elementi */
+    max-width: 100%;
+    /* Larghezza massima */
+    margin: 0 auto;
+    /* Centra il contenitore */
+    padding: 30px 20px 40px 20px;
+    /* Spaziatura interna */
+    box-sizing: border-box;
+  }
+
+  .section-d-container .article-item:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .section-d-container .article-item:nth-child(2) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .section-d-container .article-item:nth-child(3) {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+
+  .section-d-container .load-more-btn {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    display: inline-flex; /* Rende visibile il bottone */
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+    margin: 20px auto 0; /* Centra il bottone sotto gli articoli */
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+    background-color: #ffff;
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-sizing: border-box;
+  }
+
+  .section-d-container .load-more-btn .arrow-right {
+    stroke: black; /* Colore della freccia */
+    width: 14px;
+    height: 14px;
+    vertical-align: middle; /* Allinea la freccia al centro del testo */
   }
 }
 
