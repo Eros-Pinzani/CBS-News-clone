@@ -1244,16 +1244,10 @@ ul {
     /* Aggiunge spazio sotto la live */
   }
 
-  .section-a-container .article-item:nth-child(1) h4 {
-    margin: 10px 0;
-    padding: 0 0 0 6.88px;
-  }
-
   .section-a-container .article-item:nth-child(n+2) h4 {
     margin: 0 0 10px;
   }
 }
-
 
 /*-------------------------------------------------SECTION B-----------------------------------------------------------------*/
 
@@ -1262,6 +1256,7 @@ ul {
   /* Occupa tutta la larghezza visibile */
   border-bottom: 1px solid #e8e8e8;
   /* Riga dello stesso colore e spessore di quella sotto gli header */
+  margin-top: 40px;
 }
 
 .section-b-title {
@@ -1424,6 +1419,374 @@ ul {
 .section-b-container .article-item:hover {
   cursor: pointer;
 }
+
+@media (max-width: 1360px) {
+  .section-b-title {
+    margin-left: auto;
+    /* Aggiunge spaziatura per allineare il titolo */
+    max-width: 1020px;
+    /* Allinea il titolo con il contenitore */
+  }
+
+  .section-b-title h3 {
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-size: 45.12px;
+  }
+
+  .section-b-container {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    /* Tre colonne di larghezza uguale */
+    grid-template-rows: repeat(7, auto);
+    /* Prima riga alta 168px, 6 righe auto, ultima riga auto */
+    gap: 40px 40px;
+    /* Spaziatura tra gli elementi */
+    max-width: 1020px;
+    /* Larghezza massima */
+    margin: 0 auto;
+    /* Centra il contenitore */
+    padding: 30px 20px 40px 20px;
+    /* Spaziatura interna */
+    box-sizing: border-box;
+  }
+
+  /* Articolo principale */
+  .section-b-container .article-item:nth-child(1) {
+    grid-column: 1 / 3;
+    /* Occupa le prime due colonne */
+    grid-row: 1 / 7;
+    /* Occupa le prime 6 righe */
+    display: flex;
+    flex-direction: column;
+    /* Disposizione verticale */
+    gap: 10px;
+    /* Spaziatura tra immagine, titolo, paragrafo e ora */
+  }
+
+  .section-b-container .article-item:nth-child(1) img {
+    width: 100%;
+    /* L'immagine occupa tutta la larghezza disponibile */
+    height: auto;
+    /* Mantiene le proporzioni */
+  }
+
+  .section-b-container .article-item:nth-child(1) h4,
+  .section-b-container .article-item:nth-child(1) p,
+  .section-b-container .article-item:nth-child(1) .time {
+    text-align: left;
+    /* Allinea il testo a sinistra */
+  }
+
+  .section-b-container .article-item:nth-child(1) h4 {
+    margin-top: 0;
+    padding: 0 0 2px 6.88px;
+  }
+
+  .section-b-container .article-item:nth-child(1) p {
+    margin: 20px 0 10px;
+  }
+
+  /* Articoli secondari */
+  .section-b-container .article-item:nth-child(2) {
+    grid-column: 1 / 2;
+    /* Occupa la prima colonna */
+    grid-row: 7 / 8;
+    /* Occupa l'ultima riga */
+  }
+
+  .section-b-container .article-item:nth-child(3) {
+    grid-column: 2 / 3;
+    /* Occupa la seconda colonna */
+    grid-row: 7 / 8;
+    /* Occupa l'ultima riga */
+  }
+
+  .section-b-container .article-item:nth-child(2) h4,
+  .section-b-container .article-item:nth-child(3) h4 {
+    margin-top: 10px;
+  }
+
+  /* Ad accanto agli articoli secondari */
+  .section-b-container .ad-container {
+    grid-column: 3 / 4;
+    /* Occupa la terza colonna */
+    grid-row: 7 / 8;
+    /* Occupa l'ultima riga */
+  }
+
+  /* Articoli minori sotto la live */
+  .section-b-container .article-item:nth-child(n+4) {
+    grid-column: 3 / 4;
+    /* Posizionati nella terza colonna */
+    grid-row: auto;
+    /* Si adattano automaticamente */
+  }
+
+  .section-b-container ul {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 1020px) {
+  .section-b-title {
+    margin-left: 0;
+    padding-left: 20px;
+    /* Aggiunge spaziatura per allineare il titolo */
+  }
+
+  .section-b-title h3 {
+    padding-left: 0;
+    font-size: 32px;
+  }
+
+  .section-b-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Due colonne di larghezza uguale */
+    grid-template-rows: repeat(6, auto);
+    /* Otto righe con altezza adattata al contenuto */
+    grid-gap: 20px;
+    /* Spaziatura tra gli elementi */
+    max-width: 100%;
+    /* Larghezza massima */
+    margin: 0 auto;
+    /* Centra il contenitore */
+    padding: 20px;
+    /* Spaziatura interna */
+    align-items: start;
+  }
+
+  /* Articolo principale */
+  .section-b-container .article-item:nth-child(1) {
+    grid-column: 1 / 2;
+    /* Occupa la prima colonna */
+    grid-row: 1 / 2;
+    /* Occupa la prima riga */
+    display: flex;
+    flex-direction: column;
+    /* Disposizione verticale */
+    gap: 0;
+    /* Rimuove lo spazio tra immagine, titolo e ora */
+    height: auto;
+  }
+
+  .section-b-container .article-item:nth-child(1) p {
+    display: none;
+    /* Nasconde il paragrafo */
+  }
+
+  .section-b-container .article-item:nth-child(1) h4 {
+    font-size: 17.12px;
+    /* Dimensione del font */
+    margin: 5px 0;
+    /* Riduce il margine sopra e sotto */
+    padding: 0;
+  }
+
+  .section-b-container .ad-container {
+    grid-column: 2 / 3;
+    /* Sposta l'ad nella seconda colonna */
+    grid-row: 1 / 2;
+    /* Sposta l'ad nella prima riga */
+  }
+
+  .section-b-container .article-item:nth-child(2) {
+    grid-column: 1 / 2;
+    /* Posiziona nella prima colonna */
+    grid-row: 3 / 4;
+    /* Posiziona nella terza riga */
+    display: flex;
+    flex-direction: row-reverse;
+    /* Disposizione verticale */
+    gap: 5px;
+    /* Spaziatura tra titolo e ora */
+  }
+
+  .section-b-container .article-item:nth-child(3) {
+    grid-column: 2 / 3;
+    /* Posiziona nella seconda colonna */
+    grid-row: 3 / 4;
+    /* Posiziona nella terza riga */
+    display: flex;
+    flex-direction: row-reverse;
+    /* Disposizione verticale */
+    gap: 5px;
+    /* Spaziatura tra titolo e ora */
+  }
+
+  .section-b-container .article-item:nth-child(2) h4,
+  .section-b-container .article-item:nth-child(3) h4 {
+    font-size: 17.12px;
+    /* Dimensione del font */
+    margin: 5px 0;
+    /* Margine sopra e sotto */
+  }
+
+  .section-b-container .article-item:nth-child(5) {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+  }
+
+  .section-b-container .article-item:nth-child(6) {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+  }
+
+  .section-b-container .article-item:nth-child(7) {
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
+  }
+
+  .section-b-container .article-item:nth-child(8) {
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+  }
+
+  .section-b-container .article-item:nth-child(9) {
+    grid-column: 1 / 2;
+    grid-row: 6 / 7;
+  }
+
+  .section-b-container .article-item:nth-child(10) {
+    grid-column: 2 / 3;
+    grid-row: 6 / 7;
+  }
+
+  /* Immagine dell'articolo principale */
+  .section-b-container .article-item:nth-child(1) img {
+    width: 100%;
+    max-width: 480px;
+    /* Larghezza massima */
+    max-height: 270px;
+    /* Altezza massima */
+    min-width: 354px;
+    /* Larghezza minima */
+    min-height: 200px;
+    /* Altezza minima */
+    object-fit: cover;
+    /* Adatta l'immagine senza distorsioni */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .section-b-title {
+    margin-left: 0;
+    padding-left: 20px;
+    /* Aggiunge spaziatura per allineare il titolo */
+  }
+
+  .section-b-title h3 {
+    padding-left: 0;
+    font-size: 24px;
+  }
+
+  .section-b-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Una sola colonna */
+    grid-template-rows: repeat(9, auto);
+    /* Dieci righe con altezza adattata al contenuto */
+    grid-gap: 0;
+    /* Spaziatura tra gli elementi */
+    max-width: 100%;
+    /* Larghezza massima */
+    margin: 0 auto;
+    /* Centra il contenitore */
+    padding: 10px 20px 20px 20px;
+    /* Spaziatura interna */
+    box-sizing: border-box;
+  }
+
+  /* Articolo principale nella prima riga */
+  .section-b-container .article-item:nth-child(1) {
+    grid-column: 1 / 2;
+    /* Occupa la prima colonna */
+    grid-row: 1 / 2;
+    /* Occupa la prima riga */
+    display: flex;
+    flex-direction: column;
+    /* Disposizione verticale */
+    gap: 10px;
+    /* Spaziatura tra immagine, titolo e ora */
+    height: auto;
+    /* Altezza adattata al contenuto */
+  }
+
+  /* Nascondi l'ad */
+  .section-b-container .ad-container {
+    display: none;
+    /* Nasconde l'ad */
+  }
+
+  /* Articoli minori dalla quinta riga in poi */
+  .section-b-container .article-item:nth-child(n+2) {
+    grid-column: 1 / 2;
+    /* Occupa la prima colonna */
+    grid-row: auto;
+    /* Si adatta automaticamente alle righe successive */
+    display: flex;
+    flex-direction: row-reverse;
+    /* Inverte l'ordine: immagine a destra, testo a sinistra */
+    align-items: center;
+    /* Allinea verticalmente immagine e testo */
+    gap: 10px;
+    /* Spaziatura tra immagine e testo */
+    justify-content: space-between;
+  }
+
+  .section-b-container .article-item:nth-child(1) img {
+    width: 100%;
+    max-width: 728px;
+    /* Larghezza massima */
+    max-height: 410px;
+    /* Altezza massima */
+    object-fit: cover;
+    /* Adatta l'immagine senza distorsioni */
+  }
+
+  .section-b-container .article-item:nth-child(2),
+  .section-b-container .article-item:nth-child(3) {
+    margin-bottom: 0;
+  }
+
+  /* Mostra le immagini degli articoli minori */
+  .section-b-container .article-item:nth-child(n+2) img {
+    display: block;
+    /* Rendi visibili le immagini */
+    width: 90px;
+    /* Adatta l'immagine alla larghezza del contenitore */
+    height: auto;
+    /* Mantiene le proporzioni */
+    max-width: 90px;
+    /* Larghezza massima */
+    max-height: 90px;
+    /* Altezza massima */
+    object-fit: cover;
+    /* Adatta l'immagine senza distorsioni */
+    margin-bottom: 10px;
+    /* Spaziatura sotto l'immagine */
+  }
+
+  .section-b-container .article-item {
+    margin-bottom: 20px;
+    /* Aggiunge spazio verticale tra gli articoli */
+    font-size: 17.12px;
+    /* Imposta la dimensione del font per tutti gli articoli */
+  }
+
+  .section-b-container .article-item h4 {
+    font-size: 17.12px;
+    /* Imposta la dimensione del font per titoli e paragrafi */
+  }
+
+  .section-b-container .article-item:nth-child(n+2) h4 {
+    margin: 0 0 10px;
+  }
+}
+
 /*----------------------------------------------------------------------------------FOOTER---------------------------------------------------------------------------------------------*/
 
 /* Footer */
