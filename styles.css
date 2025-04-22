@@ -2560,6 +2560,7 @@ ul {
   .section-d-container .article-item p {
     display: -webkit-box; /* Usa un box flessibile */
     -webkit-line-clamp: 4; /* Mostra solo 4 righe */
+    line-clamp: 4; /* Standard property for compatibility */
     -webkit-box-orient: vertical; /* Orienta il box verticalmente */
     overflow: hidden; /* Nasconde il testo in eccesso */
     text-overflow: ellipsis; /* Aggiunge "..." al testo tagliato */
