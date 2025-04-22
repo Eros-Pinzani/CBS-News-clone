@@ -546,116 +546,171 @@ ul {
 /*---------------------------------------------------------------------------- BODY -------------------------------------------------------------------------------*/
 
 /* Contenitore principale della sezione */
+
+.section-a-wrapper {
+  width: 100%;
+  /* Occupa tutta la larghezza visibile */
+  border-bottom: 1px solid #e8e8e8;
+  /* Riga dello stesso colore e spessore di quella sotto gli header */
+}
+
 .section-a-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Quattro colonne di larghezza uguale */
-  grid-template-rows: 168px repeat(6, auto); /* La prima riga alta quanto la live, le altre sei si adattano agli articoli minori */
-  gap: 25px 40px; /* Spaziatura tra gli elementi */
-  max-width: 1320px; /* Larghezza massima */
-  margin: 0 auto; /* Centra il contenitore */
-  padding: 40px 0; /* Spaziatura interna */
-  align-items: start; /* Allinea gli elementi in alto */
+  grid-template-columns: repeat(4, 1fr);
+  /* Quattro colonne di larghezza uguale */
+  grid-template-rows: 168px repeat(6, auto);
+  /* La prima riga alta quanto la live, le altre sei si adattano agli articoli minori */
+  gap: 25px 40px;
+  /* Spaziatura tra gli elementi */
+  max-width: 1320px;
+  /* Larghezza massima */
+  margin: 0 auto;
+  /* Centra il contenitore */
+  padding: 40px 0;
+  /* Spaziatura interna */
+  align-items: start;
+  /* Allinea gli elementi in alto */
 }
 
 /* Articolo principale */
-.article-item:nth-child(1) {
-  grid-column: 1 / 4; /* Occupa le prime tre colonne */
-  grid-row: 1 / 5; /* Occupa le prime quattro righe */
+.section-a-container .article-item:nth-child(1) {
+  grid-column: 1 / 4;
+  /* Occupa le prime tre colonne */
+  grid-row: 1 / 5;
+  /* Occupa le prime quattro righe */
   display: flex;
-  flex-direction: row-reverse; /* Immagine a destra */
-  gap: 20px; /* Spaziatura tra immagine e testo */
-  align-items: flex-start; /* Allinea gli elementi in alto */
-  height: 494.38px; /* Mantiene la sua altezza naturale */
-  overflow: visible; /* Assicura che il contenuto non venga tagliato */
+  flex-direction: row-reverse;
+  /* Immagine a destra */
+  gap: 20px;
+  /* Spaziatura tra immagine e testo */
+  align-items: flex-start;
+  /* Allinea gli elementi in alto */
+  height: 474.17px;
+  /* Mantiene la sua altezza naturale */
+  overflow: visible;
+  /* Assicura che il contenuto non venga tagliato */
 }
 
-.article-item img {
+.section-a-container .article-item img {
   margin: 0;
   padding: 0;
 }
 
 /* Live box accanto all'articolo principale */
 .live {
-  grid-column: 4 / 5; /* Occupa la quarta colonna */
-  grid-row: 1 / 2; /* Occupa solo la prima riga */
-  height: 168px; /* Altezza fissa */
+  grid-column: 4 / 5;
+  /* Occupa la quarta colonna */
+  grid-row: 1 / 2;
+  /* Occupa solo la prima riga */
+  height: 168px;
+  /* Altezza fissa */
   width: 300px;
   display: flex;
-  justify-content: center; /* Centra il contenuto orizzontalmente */
-  align-items: center; /* Centra il contenuto verticalmente */
-  background-color: #f4f4f4; /* Sfondo grigio chiaro */
-  overflow: hidden; /* Nasconde eventuali contenuti in eccesso */
+  justify-content: center;
+  /* Centra il contenuto orizzontalmente */
+  align-items: center;
+  /* Centra il contenuto verticalmente */
+  background-color: #f4f4f4;
+  /* Sfondo grigio chiaro */
+  overflow: hidden;
+  /* Nasconde eventuali contenuti in eccesso */
   margin: 0 auto;
 }
 
 /* Stile per la figure della live */
 .live figure {
-  width: 100%; /* Occupa tutta la larghezza del contenitore */
-  height: 100%; /* Occupa tutta l'altezza del contenitore */
-  margin: 0; /* Rimuove margini predefiniti */
+  width: 100%;
+  /* Occupa tutta la larghezza del contenitore */
+  height: 100%;
+  /* Occupa tutta l'altezza del contenitore */
+  margin: 0;
+  /* Rimuove margini predefiniti */
   display: flex;
-  justify-content: center; /* Centra il contenuto orizzontalmente */
-  align-items: center; /* Centra il contenuto verticalmente */
+  justify-content: center;
+  /* Centra il contenuto orizzontalmente */
+  align-items: center;
+  /* Centra il contenuto verticalmente */
 }
 
 /* Stile per l'immagine all'interno della live */
 .live img {
-  width: 100%; /* L'immagine occupa tutta la larghezza della figure */
-  height: 100%; /* L'immagine occupa tutta l'altezza della figure */
-  object-fit: cover; /* Adatta l'immagine senza distorsioni */
+  width: 100%;
+  /* L'immagine occupa tutta la larghezza della figure */
+  height: 100%;
+  /* L'immagine occupa tutta l'altezza della figure */
+  object-fit: cover;
+  /* Adatta l'immagine senza distorsioni */
 }
 
 /* Articoli 2 e 3 sotto al principale */
-.article-item:nth-child(2) {
-  grid-column: 1 / 2; /* Occupa la prima colonna */
-  grid-row: 5 / 8; /* Occupa le ultime tre righe */
+.section-a-container .article-item:nth-child(2) {
+  grid-column: 1 / 2;
+  /* Occupa la prima colonna */
+  grid-row: 5 / 8;
+  /* Occupa le ultime tre righe */
 }
 
-.article-item:nth-child(3) {
-  grid-column: 2 / 3; /* Occupa la seconda colonna */
-  grid-row: 5 / 8; /* Occupa le ultime tre righe */
+.section-a-container .article-item:nth-child(3) {
+  grid-column: 2 / 3;
+  /* Occupa la seconda colonna */
+  grid-row: 5 / 8;
+  /* Occupa le ultime tre righe */
 }
 
 /* Ad accanto agli articoli 2 e 3 */
 .ad-container {
-  grid-column: 3 / 4; /* Occupa la terza colonna */
-  grid-row: 5 / 8; /* Occupa le ultime tre righe */
-  height: 100%; /* Altezza basata sul contenuto */
+  grid-column: 3 / 4;
+  /* Occupa la terza colonna */
+  grid-row: 5 / 8;
+  /* Occupa le ultime tre righe */
+  height: 100%;
+  /* Altezza basata sul contenuto */
   display: flex;
-  justify-content: center; /* Centra il contenuto orizzontalmente */
-  align-items: center; /* Centra il contenuto verticalmente */
-  overflow: hidden; /* Nasconde eventuali contenuti in eccesso */
+  justify-content: center;
+  /* Centra il contenuto orizzontalmente */
+  align-items: center;
+  /* Centra il contenuto verticalmente */
+  overflow: hidden;
+  /* Nasconde eventuali contenuti in eccesso */
 }
 
 /* Articoli minori sotto la live */
-.article-item:nth-child(n+4) {
-  grid-column: 4 / 5; /* Posizionati nella quarta colonna */
-  grid-row: auto; /* Si adattano automaticamente */
+.section-a-container .article-item:nth-child(n+4) {
+  grid-column: 4 / 5;
+  /* Posizionati nella quarta colonna */
+  grid-row: auto;
+  /* Si adattano automaticamente */
   display: flex;
-  flex-direction: row; /* Layout orizzontale: immagine a sinistra, testo a destra */
-  align-items: flex-start; /* Allinea gli elementi in alto */
-  margin: 0; /* Rimuove margini verticali */
+  flex-direction: row;
+  /* Layout orizzontale: immagine a sinistra, testo a destra */
+  align-items: flex-start;
+  /* Allinea gli elementi in alto */
+  margin: 0;
+  /* Rimuove margini verticali */
 }
 
-.article-item:nth-child(n+4) .title-container {
+.section-a-container .article-item:nth-child(n+4) .title-container {
   font-size: 17.12px;
 }
 
-.article-item:nth-child(n+4) h4 {
+.section-a-container .article-item:nth-child(n+4) h4 {
   margin-top: 0;
   margin-bottom: 10px;
-  font-size: 17.12px; /* Dimensione del titolo */
+  font-size: 17.12px;
+  /* Dimensione del titolo */
 }
 
 /* Nascondi le immagini degli articoli secondari */
-.article-item:nth-child(n+4) img {
-  display: none; /* Nasconde le immagini */
+.section-a-container .article-item:nth-child(n+4) img {
+  display: none;
+  /* Nasconde le immagini */
 }
 
 /* Rimuovi i pallini dai <li> della sezione specifica */
 .section-a-container li {
   font-size: 11.04px;
-  list-style: none; /* Rimuove i pallini */
+  list-style: none;
+  /* Rimuove i pallini */
   margin: 0 15px 0 0;
   color: #101010;
 }
@@ -664,7 +719,7 @@ ul {
   font-family: "Publico Headline", serif;
 }
 
-.article-item:nth-child(1) h4 {
+.section-a-container .article-item:nth-child(1) h4 {
   font-size: 32px;
   line-height: 1;
   font-weight: bold;
@@ -672,20 +727,702 @@ ul {
   color: #101010;
 }
 
-.article-item:nth-child(1) p {
+.section-a-container .article-item:nth-child(1) p {
   font-size: 18.08px;
   line-height: 1.23;
   margin: 10px 0;
   color: #101010;
 }
 
-.article-item:nth-child(2) h4,
-.article-item:nth-child(3) h4 {
+.section-a-container .article-item:nth-child(2) h4,
+.section-a-container .article-item:nth-child(3) h4 {
   font-size: 24px;
   line-height: 1;
   font-weight: bold;
   margin: 0 0 10px;
   color: #101010;
+}
+
+/* Sottolinea il titolo dell'articolo principale solo quando si passa sopra immagine, paragrafo o titolo */
+.section-a-container .article-item:hover h4 {
+  text-decoration: underline;
+  /* Aggiunge la sottolineatura */
+}
+
+.section-a-container .article-item:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 1360px) {
+  .section-a-container {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    /* Tre colonne di larghezza uguale */
+    grid-template-rows: 168px repeat(6, 83.61px) auto;
+    /* Prima riga alta 168px, 6 righe auto, ultima riga auto */
+    gap: 25px 40px;
+    /* Spaziatura tra gli elementi */
+    max-width: 1020px;
+    /* Larghezza massima */
+    margin: 0 auto;
+    /* Centra il contenitore */
+    padding: 40px 20px;
+    /* Spaziatura interna */
+    box-sizing: border-box;
+  }
+
+  /* Articolo principale */
+  .section-a-container .article-item:nth-child(1) {
+    grid-column: 1 / 3;
+    /* Occupa le prime due colonne */
+    grid-row: 1 / 8;
+    /* Occupa le prime 7 righe */
+    display: flex;
+    flex-direction: column;
+    /* Disposizione verticale */
+    gap: 10px;
+    /* Spaziatura tra immagine, titolo, paragrafo e ora */
+  }
+
+  .section-a-container .article-item:nth-child(1) img {
+    width: 100%;
+    /* L'immagine occupa tutta la larghezza disponibile */
+    height: auto;
+    /* Mantiene le proporzioni */
+  }
+
+  .section-a-container .article-item:nth-child(1) h4,
+  .section-a-container .article-item:nth-child(1) p,
+  .section-a-container .article-item:nth-child(1) .time {
+    text-align: left;
+    /* Allinea il testo a sinistra */
+  }
+
+  .section-a-container .article-item:nth-child(1) h4 {
+    margin-top: 0;
+    padding: 0 0 2px 6.88px;
+  }
+
+  .section-a-container .article-item:nth-child(1) p {
+    margin: 20px 0 10px;
+  }
+
+  /* Live box accanto all'articolo principale */
+  .live {
+    grid-column: 3 / 4;
+    /* Occupa la terza colonna */
+    grid-row: 1 / 2;
+    /* Occupa solo la prima riga */
+  }
+
+  /* Articoli secondari */
+  .section-a-container .article-item:nth-child(2) {
+    grid-column: 1 / 2;
+    /* Occupa la prima colonna */
+    grid-row: 8 / 9;
+    /* Occupa l'ultima riga */
+  }
+
+  .section-a-container .article-item:nth-child(3) {
+    grid-column: 2 / 3;
+    /* Occupa la seconda colonna */
+    grid-row: 8 / 9;
+    /* Occupa l'ultima riga */
+  }
+
+  .section-a-container .article-item:nth-child(2) h4,
+  .section-a-container .article-item:nth-child(3) h4 {
+    margin-top: 10px;
+  }
+
+  /* Ad accanto agli articoli secondari */
+  .section-a-container .ad-container {
+    grid-column: 3 / 4;
+    /* Occupa la terza colonna */
+    grid-row: 8 / 9;
+    /* Occupa l'ultima riga */
+  }
+
+  /* Articoli minori sotto la live */
+  .section-a-container .article-item:nth-child(n+4) {
+    grid-column: 3 / 4;
+    /* Posizionati nella terza colonna */
+    grid-row: auto;
+    /* Si adattano automaticamente */
+  }
+
+  .section-a-container ul {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 1020px) {
+  .section-a-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Due colonne di larghezza uguale */
+    grid-template-rows: repeat(8, auto);
+    /* Otto righe con altezza adattata al contenuto */
+    grid-gap: 20px;
+    /* Spaziatura tra gli elementi */
+    max-width: 100%;
+    /* Larghezza massima */
+    margin: 0 auto;
+    /* Centra il contenitore */
+    padding: 20px;
+    /* Spaziatura interna */
+    align-items: start;
+  }
+
+  /* Articolo principale */
+  .section-a-container .article-item:nth-child(1) {
+    grid-column: 1 / 2;
+    /* Occupa la prima colonna */
+    grid-row: 1 / 2;
+    /* Occupa la prima riga */
+    display: flex;
+    flex-direction: column;
+    /* Disposizione verticale */
+    gap: 0;
+    /* Rimuove lo spazio tra immagine, titolo e ora */
+    height: auto;
+  }
+
+  .section-a-container .article-item:nth-child(1) p {
+    display: none;
+    /* Nasconde il paragrafo */
+  }
+
+  .section-a-container .article-item:nth-child(1) h4 {
+    font-size: 17.12px;
+    /* Dimensione del font */
+    margin: 5px 0;
+    /* Riduce il margine sopra e sotto */
+    padding: 0;
+  }
+
+  /* Live box */
+  .live {
+    grid-column: 1 / 2;
+    /* Occupa la prima colonna */
+    grid-row: 3 / 6;
+    /* Occupa le righe 3, 4 e 5 */
+    display: flex;
+    justify-content: center;
+    /* Centra il contenuto orizzontalmente */
+    align-items: center;
+    /* Centra il contenuto verticalmente */
+    background-color: #f4f4f4;
+    /* Sfondo grigio chiaro */
+    width: 100%;
+    /* Larghezza massima */
+    height: auto;
+    /* Altezza adattata */
+  }
+
+  .section-a-container .ad-container {
+    grid-column: 2 / 3;
+    /* Sposta l'ad nella seconda colonna */
+    grid-row: 1 / 2;
+    /* Sposta l'ad nella prima riga */
+  }
+
+  .section-a-container .article-item:nth-child(2) {
+    grid-column: 2 / 3;
+    /* Posiziona nella seconda colonna */
+    grid-row: 3 / 4;
+    /* Posiziona nella terza riga */
+    display: flex;
+    flex-direction: column;
+    /* Disposizione verticale */
+    gap: 5px;
+    /* Spaziatura tra titolo e ora */
+  }
+
+  /* Nascondi l'immagine dell'articolo 2 */
+  .section-a-container .article-item:nth-child(2) img {
+    display: none;
+    /* Nasconde l'immagine */
+  }
+
+  /* Stile per il titolo dell'articolo 2 */
+  .section-a-container .article-item:nth-child(2) h4 {
+    font-size: 17.12px;
+    /* Dimensione del font */
+    margin: 5px 0;
+    /* Margine sopra e sotto */
+  }
+
+  .section-a-container .article-item:nth-child(3) {
+    grid-column: 2 / 3;
+    /* Posiziona nella seconda colonna */
+    grid-row: 4 / 5;
+    /* Posiziona nella quarta riga */
+    display: flex;
+    flex-direction: column;
+    /* Disposizione verticale */
+    gap: 5px;
+    /* Spaziatura tra titolo e ora */
+  }
+
+  /* Nascondi l'immagine dell'articolo 3 */
+  .section-a-container .article-item:nth-child(3) img {
+    display: none;
+    /* Nasconde l'immagine */
+  }
+
+  /* Stile per il titolo dell'articolo 3 */
+  .section-a-container .article-item:nth-child(3) h4 {
+    font-size: 17.12px;
+    /* Riduce la dimensione del font */
+    margin: 5px 0;
+    /* Margine sopra e sotto */
+  }
+
+  .section-a-container .article-item:nth-child(5) {
+    grid-column: 2 / 3;
+    /* Posiziona nella prima colonna */
+    grid-row: 5 / 6;
+    /* Posiziona nella sesta riga */
+  }
+
+  .section-a-container .article-item:nth-child(6) {
+    grid-column: 1 / 2;
+    /* Posiziona nella seconda colonna */
+    grid-row: 6 / 7;
+    /* Posiziona nella sesta riga */
+  }
+
+  .section-a-container .article-item:nth-child(7) {
+    grid-column: 2 / 3;
+    /* Posiziona nella prima colonna */
+    grid-row: 6 / 7;
+    /* Posiziona nella settima riga */
+  }
+
+  .section-a-container .article-item:nth-child(8) {
+    grid-column: 1 / 2;
+    /* Posiziona nella seconda colonna */
+    grid-row: 7 / 8;
+    /* Posiziona nella settima riga */
+  }
+
+  .section-a-container .article-item:nth-child(9) {
+    grid-column: 2 / 3;
+    /* Posiziona nella prima colonna */
+    grid-row: 7 / 8;
+    /* Posiziona nell'ottava riga */
+  }
+
+  .section-a-container .article-item:nth-child(10) {
+    grid-column: 1 / 2;
+    /* Posiziona nella seconda colonna */
+    grid-row: 8 / 9;
+    /* Posiziona nell'ottava riga */
+  }
+
+  .live img {
+    width: 100%;
+    max-width: 480px;
+    /* Larghezza massima */
+    max-height: 270px;
+    /* Altezza massima */
+    min-width: 354px;
+    /* Larghezza minima */
+    min-height: 200px;
+    /* Altezza minima */
+    object-fit: cover;
+    /* Adatta l'immagine senza distorsioni */
+  }
+
+  /* Immagine dell'articolo principale */
+  .section-a-container .article-item:nth-child(1) img {
+    width: 100%;
+    max-width: 480px;
+    /* Larghezza massima */
+    max-height: 270px;
+    /* Altezza massima */
+    min-width: 354px;
+    /* Larghezza minima */
+    min-height: 200px;
+    /* Altezza minima */
+    object-fit: cover;
+    /* Adatta l'immagine senza distorsioni */
+  }
+}
+
+@media (max-width: 768px) {
+  .section-a-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Una sola colonna */
+    grid-template-rows: repeat(10, auto);
+    /* Dieci righe con altezza adattata al contenuto */
+    grid-gap: 0;
+    /* Spaziatura tra gli elementi */
+    max-width: 100%;
+    /* Larghezza massima */
+    margin: 0 auto;
+    /* Centra il contenitore */
+    padding: 20px;
+    /* Spaziatura interna */
+    box-sizing: border-box;
+  }
+
+  /* Articolo principale nella prima riga */
+  .section-a-container .article-item:nth-child(1) {
+    grid-column: 1 / 2;
+    /* Occupa la prima colonna */
+    grid-row: 1 / 2;
+    /* Occupa la prima riga */
+    display: flex;
+    flex-direction: column;
+    /* Disposizione verticale */
+    gap: 10px;
+    /* Spaziatura tra immagine, titolo e ora */
+    height: auto;
+    /* Altezza adattata al contenuto */
+  }
+
+  /* Live nella seconda riga */
+  .live {
+    grid-column: 1 / 2;
+    /* Occupa la prima colonna */
+    grid-row: 2 / 3;
+    /* Occupa la seconda riga */
+    display: flex;
+    justify-content: center;
+    /* Centra il contenuto orizzontalmente */
+    align-items: center;
+    /* Centra il contenuto verticalmente */
+    background-color: #f4f4f4;
+    /* Sfondo grigio chiaro */
+    width: 100%;
+    /* Larghezza massima */
+    height: auto;
+    /* Altezza adattata */
+  }
+
+  /* Articolo 2 nella terza riga */
+  .section-a-container .article-item:nth-child(2) {
+    grid-column: 1 / 2;
+    /* Occupa la prima colonna */
+    grid-row: 3 / 4;
+    /* Occupa la terza riga */
+    display: flex;
+    flex-direction: column;
+    /* Disposizione verticale */
+    gap: 5px;
+    /* Spaziatura tra titolo e ora */
+    justify-content: space-between;
+  }
+
+  /* Articolo 3 nella quarta riga */
+  .section-a-container .article-item:nth-child(3) {
+    grid-column: 1 / 2;
+    /* Occupa la prima colonna */
+    grid-row: 4 / 5;
+    /* Occupa la quarta riga */
+    display: flex;
+    flex-direction: column;
+    /* Disposizione verticale */
+    gap: 5px;
+    /* Spaziatura tra titolo e ora */
+    justify-content: space-between;
+
+  }
+
+  /* Nascondi l'ad */
+  .section-a-container .ad-container {
+    display: none;
+    /* Nasconde l'ad */
+  }
+
+  .section-a-container .article-item:nth-child(n+2) {
+    margin-left: 0;
+  }
+
+  /* Articoli minori dalla quinta riga in poi */
+  .section-a-container .article-item:nth-child(n+4) {
+    grid-column: 1 / 2;
+    /* Occupa la prima colonna */
+    grid-row: auto;
+    /* Si adatta automaticamente alle righe successive */
+    display: flex;
+    flex-direction: row-reverse;
+    /* Inverte l'ordine: immagine a destra, testo a sinistra */
+    align-items: center;
+    /* Allinea verticalmente immagine e testo */
+    gap: 10px;
+    /* Spaziatura tra immagine e testo */
+    justify-content: space-between;
+  }
+
+  /* Articoli 2 e 3 */
+  .section-a-container .article-item:nth-child(2),
+  .section-a-container .article-item:nth-child(3) {
+    display: flex;
+    flex-direction: row-reverse;
+    /* Inverte l'ordine: immagine a destra, testo a sinistra */
+    align-items: center;
+    /* Allinea verticalmente immagine e testo */
+    gap: 10px;
+    /* Spaziatura tra immagine e testo */
+  }
+
+  .section-a-container .article-item:nth-child(1) img {
+    width: 100%;
+    max-width: 728px;
+    /* Larghezza massima */
+    max-height: 410px;
+    /* Altezza massima */
+    object-fit: cover;
+    /* Adatta l'immagine senza distorsioni */
+  }
+
+  .live img {
+    width: 100%;
+    /* Adatta l'immagine al contenitore */
+    height: auto;
+    /* Mantiene le proporzioni */
+    max-width: 728px;
+    /* Larghezza massima */
+    max-height: 410px;
+    /* Altezza massima */
+    object-fit: cover;
+    /* Adatta l'immagine senza distorsioni */
+  }
+
+  /* Mostra le immagini degli articoli 2 e 3 */
+  .section-a-container .article-item:nth-child(2) img,
+  .section-a-container .article-item:nth-child(3) img {
+    display: block;
+    /* Rendi visibili le immagini */
+    width: 90px;
+    /* Larghezza fissa */
+    height: 90px;
+    /* Altezza fissa */
+    object-fit: cover;
+    /* Adatta l'immagine senza distorsioni */
+    margin-bottom: 10px;
+    /* Spaziatura sotto l'immagine */
+  }
+
+  /* Mostra le immagini degli articoli minori */
+  .section-a-container .article-item:nth-child(n+4) img {
+    display: block;
+    /* Rendi visibili le immagini */
+    width: 90px;
+    /* Adatta l'immagine alla larghezza del contenitore */
+    height: auto;
+    /* Mantiene le proporzioni */
+    max-width: 90px;
+    /* Larghezza massima */
+    max-height: 90px;
+    /* Altezza massima */
+    object-fit: cover;
+    /* Adatta l'immagine senza distorsioni */
+    margin-bottom: 10px;
+    /* Spaziatura sotto l'immagine */
+  }
+
+  .section-a-container .article-item {
+    margin-bottom: 20px;
+    /* Aggiunge spazio verticale tra gli articoli */
+    font-size: 17.12px;
+    /* Imposta la dimensione del font per tutti gli articoli */
+  }
+
+  .section-a-container .article-item h4 {
+    font-size: 17.12px;
+    /* Imposta la dimensione del font per titoli e paragrafi */
+  }
+
+  .live {
+    margin-bottom: 20px;
+    /* Aggiunge spazio sotto la live */
+  }
+
+  .section-a-container .article-item:nth-child(1) h4 {
+    margin: 10px 0;
+    padding: 0 0 0 6.88px;
+  }
+
+  .section-a-container .article-item:nth-child(n+2) h4 {
+    margin: 0 0 10px;
+  }
+}
+
+
+/*-------------------------------------------------SECTION B-----------------------------------------------------------------*/
+
+.section-b-wrapper {
+  width: 100%;
+  /* Occupa tutta la larghezza visibile */
+  border-bottom: 1px solid #e8e8e8;
+  /* Riga dello stesso colore e spessore di quella sotto gli header */
+}
+
+.section-b-title {
+  margin: 0 auto;
+  max-width: 1320px;
+}
+
+.section-b-title h3 {
+  font-family: "Publico Headline", serif;
+  font-size: 56px;
+  font-weight: 900;
+  letter-spacing: -1.2px;
+  margin: 0 0 42px;
+}
+
+.section-b-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* Quattro colonne di larghezza uguale */
+  grid-template-rows: repeat(6, auto);
+  /* La prima riga alta quanto la live, le altre sei si adattano agli articoli minori */
+  gap: 40px 40px;
+  /* Spaziatura tra gli elementi */
+  max-width: 1320px;
+  /* Larghezza massima */
+  margin: 0 auto;
+  /* Centra il contenitore */
+  padding: 0 0 40px 0;
+  /* Spaziatura interna */
+  align-items: start;
+  /* Allinea gli elementi in alto */
+}
+
+/* Articolo principale */
+.section-b-container .article-item:nth-child(1) {
+  grid-column: 1 / 4;
+  /* Occupa le prime tre colonne */
+  grid-row: 1 / 5;
+  /* Occupa le prime quattro righe */
+  display: flex;
+  flex-direction: row-reverse;
+  /* Immagine a destra */
+  gap: 20px;
+  /* Spaziatura tra immagine e testo */
+  align-items: flex-start;
+  /* Allinea gli elementi in alto */
+  height: 493.81px;
+  /* Mantiene la sua altezza naturale */
+  overflow: visible;
+  /* Assicura che il contenuto non venga tagliato */
+}
+
+.section-b-container .article-item img {
+  margin: 0;
+  padding: 0;
+}
+
+/* Articoli 2 e 3 sotto al principale */
+.section-b-container .article-item:nth-child(2) {
+  grid-column: 1 / 2;
+  /* Occupa la prima colonna */
+  grid-row: 5 / 7;
+  /* Occupa le ultime tre righe */
+}
+
+.section-b-container .article-item:nth-child(3) {
+  grid-column: 2 / 3;
+  /* Occupa la seconda colonna */
+  grid-row: 5 / 7;
+  /* Occupa le ultime tre righe */
+}
+
+/* Ad accanto agli articoli 2 e 3 */
+.ad-container {
+  grid-column: 3 / 4;
+  /* Occupa la terza colonna */
+  grid-row: 5 / 7;
+  /* Occupa le ultime tre righe */
+  height: 100%;
+  /* Altezza basata sul contenuto */
+  display: flex;
+  justify-content: center;
+  /* Centra il contenuto orizzontalmente */
+  align-items: center;
+  /* Centra il contenuto verticalmente */
+  overflow: hidden;
+  /* Nasconde eventuali contenuti in eccesso */
+}
+
+/* Articoli minori sotto la live */
+.section-b-container .article-item:nth-child(n+4) {
+  grid-column: 4 / 5;
+  /* Posizionati nella quarta colonna */
+  grid-row: auto;
+  /* Si adattano automaticamente */
+  display: flex;
+  flex-direction: row-reverse;
+  /* Layout orizzontale: immagine a sinistra, testo a destra */
+  align-items: flex-start;
+  /* Allinea gli elementi in alto */
+  margin: 0;
+  /* Rimuove margini verticali */
+}
+
+.section-b-container .article-item:nth-child(n+4) .title-container {
+  font-size: 17.12px;
+}
+
+.section-b-container .article-item:nth-child(n+4) h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  margin-right: 4px;
+  font-size: 17.12px;
+  /* Dimensione del titolo */
+}
+
+/* Rimuovi i pallini dai <li> della sezione specifica */
+.section-b-container li {
+  font-size: 11.04px;
+  list-style: none;
+  /* Rimuove i pallini */
+  margin: 0 15px 0 0;
+  color: #101010;
+}
+
+.section-b-container h4 {
+  font-family: "Publico Headline", serif;
+}
+
+.section-b-container .article-item:nth-child(1) h4 {
+  font-size: 32px;
+  line-height: 1;
+  font-weight: bold;
+  margin: 0 0 10px;
+  color: #101010;
+}
+
+.section-b-container .article-item:nth-child(1) p {
+  font-size: 18.08px;
+  line-height: 1.23;
+  margin: 10px 0;
+  color: #101010;
+}
+
+.section-b-container .article-item:nth-child(2) h4,
+.section-b-container .article-item:nth-child(3) h4 {
+  font-size: 24px;
+  line-height: 1;
+  font-weight: bold;
+  margin: 0 0 10px;
+  color: #101010;
+}
+
+/* Sottolinea il titolo dell'articolo principale solo quando si passa sopra immagine, paragrafo o titolo */
+.section-b-container .article-item:hover h4 {
+  text-decoration: underline;
+  /* Aggiunge la sottolineatura */
+}
+
+.section-b-container .article-item:hover {
+  cursor: pointer;
 }
 /*----------------------------------------------------------------------------------FOOTER---------------------------------------------------------------------------------------------*/
 
@@ -811,7 +1548,7 @@ ul {
   }
 }
 
-@media (max-width: 1019px) {
+@media (max-width: 1020px) {
   .cbs-header {
     height: 48px;
     margin: 0;
@@ -855,14 +1592,13 @@ ul {
   .articles {
     max-width: 1020px;
     margin: 0 auto;
-    padding: 0 20px;
     box-sizing: border-box;
   }
 
   .under-header-container {
     max-width: 1020px;
     margin: 0 auto;
-    padding: 0 8px 0 35px;
+    padding: 0 8px 0 15px;
     box-sizing: border-box;
   }
 
