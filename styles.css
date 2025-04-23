@@ -2846,7 +2846,7 @@ ul {
 }
 
 /* Sottolinea il titolo dell'articolo principale solo quando si passa sopra immagine, paragrafo o titolo */
-.section-e-container .article-item .img:hover + .title-container h4,
+.section-e-container .article-item .img:hover+.title-container h4,
 .section-e-container .title-container:hover h4 {
   text-decoration: underline;
   /* Aggiunge la sottolineatura */
@@ -2967,10 +2967,14 @@ ul {
   }
 
   .section-e-container .article-item img {
-    width: 100%; /* L'immagine occupa tutta la larghezza del contenitore */
-    max-width: 313px; /* Limita la larghezza massima */
-    height: auto; /* Mantiene le proporzioni */
-    object-fit: cover; /* Adatta l'immagine senza distorsioni */
+    width: 100%;
+    /* L'immagine occupa tutta la larghezza del contenitore */
+    max-width: 313px;
+    /* Limita la larghezza massima */
+    height: auto;
+    /* Mantiene le proporzioni */
+    object-fit: cover;
+    /* Adatta l'immagine senza distorsioni */
   }
 }
 
@@ -2978,6 +2982,7 @@ ul {
   .section-e {
     padding-bottom: 20px;
   }
+
   .section-e-container {
     display: flex;
     flex-direction: column;
@@ -2992,10 +2997,14 @@ ul {
   }
 
   .section-e-container .article-item img {
-    width: 100%; /* L'immagine occupa tutta la larghezza del contenitore */
-    max-width: 728px; /* Limita la larghezza massima */
-    height: auto; /* Mantiene le proporzioni */
-    object-fit: cover; /* Adatta l'immagine senza distorsioni */
+    width: 100%;
+    /* L'immagine occupa tutta la larghezza del contenitore */
+    max-width: 728px;
+    /* Limita la larghezza massima */
+    height: auto;
+    /* Mantiene le proporzioni */
+    object-fit: cover;
+    /* Adatta l'immagine senza distorsioni */
   }
 
   .section-e-container ul {
@@ -3035,6 +3044,492 @@ ul {
     /* Allinea la freccia al centro del testo */
   }
 }
+
+/*-------------------------------------------------SECTION F-----------------------------------------------------------------*/
+.section-f {
+  background-color: #101010;
+}
+
+.section-with-background-color-wrapper {
+  width: 100%;
+  /* Occupa tutta la larghezza visibile */
+  margin-top: 40px;
+}
+
+.section-f .section-b-title {
+  display: flex;
+  align-items: flex-end;
+  /* Allinea il titolo e "More" in basso */
+  gap: 10px;
+  /* Spaziatura tra il titolo e "More" */
+  margin: 0 auto;
+  max-width: 1320px;
+}
+
+.section-f .section-b-title h3 {
+  font-family: "Publico Headline", serif;
+  font-size: 56px;
+  font-weight: 900;
+  letter-spacing: -1.2px;
+  margin-top: 0;
+  margin-bottom: 42px;
+  color: #fff;
+}
+
+.section-f-container .title-container-hidden {
+  display: none;
+}
+
+.section-f-container .articles-container-hidden {
+  display: none;
+}
+
+.triangle {
+  display: inline-block;
+  margin: 0 5px;
+  /* Spaziatura tra il testo e il triangolo */
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  /* Riduce l'altezza del triangolo */
+  border-bottom: 4px solid transparent;
+  /* Riduce l'altezza del triangolo */
+  border-left: 6px solid #fff;
+  /* Riduce la larghezza del triangolo */
+}
+
+.section-f-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* Quattro colonne di larghezza uguale */
+  grid-template-rows: repeat(2, auto);
+  /* La prima riga alta quanto la live, le altre sei si adattano agli articoli minori */
+  gap: 40px 40px;
+  /* Spaziatura tra gli elementi */
+  max-width: 1320px;
+  /* Larghezza massima */
+  margin: 0 auto;
+  /* Centra il contenitore */
+  padding: 0 0 40px 0;
+  /* Spaziatura interna */
+  align-items: start;
+  /* Allinea gli elementi in alto */
+}
+
+.section-f-container .live-label {
+  display: inline-block;
+  background: linear-gradient(225deg, #DE3D05 0%, #B60505 100%);
+  /* Sfondo rosso */
+  color: #fff;
+  /* Testo bianco */
+  font-size: 12px;
+  /* Dimensione del font */
+  font-weight: bold;
+  /* Testo in grassetto */
+  text-transform: uppercase;
+  /* Testo maiuscolo */
+  padding: 2px 6px;
+  /* Spaziatura interna */
+  border-radius: 0;
+  /* Angoli arrotondati */
+  line-height: 1;
+  /* Altezza della linea */
+  margin-bottom: 10px;
+}
+
+/* Articolo principale */
+.section-f-container .article-item:nth-child(1) {
+  grid-column: 1 / 5;
+  /* Occupa le prime tre colonne */
+  grid-row: 1 / 2;
+  /* Occupa solo le prime due righe */
+  display: flex;
+  flex-direction: row-reverse;
+  /* Immagine a destra */
+  gap: 20px;
+  /* Spaziatura tra immagine e testo */
+  align-items: flex-start;
+  /* Allinea gli elementi in alto */
+  overflow: visible;
+  /* Assicura che il contenuto non venga tagliato */
+}
+
+.section-f-container .article-item:nth-child(1) img {
+  width: 980px;
+  /* L'immagine occupa tutta la larghezza disponibile */
+  height: auto;
+  /* Mantiene le proporzioni */
+  object-fit: cover;
+  /* Adatta l'immagine senza distorsioni */
+}
+
+.section-f-container .article-item img {
+  margin: 0;
+  padding: 0;
+}
+
+.section-f-container .article-item:nth-child(2) {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.section-f-container .article-item:nth-child(3) {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.section-f-container .article-item:nth-child(4) {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+
+.section-f-container .article-item:nth-child(5) {
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
+}
+
+/* Rimuovi i pallini dai <li> della sezione specifica */
+.section-f-container li {
+  font-size: 11.04px;
+  list-style: none;
+  /* Rimuove i pallini */
+  margin: 0 15px 0 0;
+  color: #101010;
+}
+
+.section-f-container h4 {
+  font-family: "Publico Headline", serif;
+  color: white;
+}
+
+.section-f-container p {
+  color: white;
+}
+
+.section-f-container li {
+  color: white;
+}
+
+.section-f-container .article-item:nth-child(1) h4 {
+  font-size: 32px;
+  line-height: 1;
+  font-weight: bold;
+  margin: 0 0 20px;
+}
+
+.section-f-container .article-item:nth-child(1) p {
+  font-size: 18.08px;
+  line-height: 1.23;
+  margin: 10px 0;
+}
+
+.section-f-container .article-item:nth-child(2) h4,
+.section-f-container .article-item:nth-child(3) h4,
+.section-f-container .article-item:nth-child(4) h4,
+.section-f-container .article-item:nth-child(5) h4 {
+  font-size: 24px;
+  line-height: 1;
+  font-weight: bold;
+  margin: 0 0 10px;
+}
+
+/* Sottolinea il titolo dell'articolo principale solo quando si passa sopra immagine, paragrafo o titolo */
+.section-f-container .article-item:hover h4 {
+  text-decoration: underline;
+  /* Aggiunge la sottolineatura */
+}
+
+.section-f-container .article-item:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 1360px) {
+  .section-f .section-b-title {
+    margin-left: auto;
+    /* Aggiunge spaziatura per allineare il titolo */
+    max-width: 1020px;
+    /* Allinea il titolo con il contenitore */
+  }
+
+  .section-f .section-b-title h3 {
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-size: 45.12px;
+  }
+
+  .section-f-container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    /* Tre colonne di larghezza uguale */
+    grid-template-rows: repeat(2, auto);
+    /* Prima riga alta 168px, 6 righe auto, ultima riga auto */
+    gap: 40px 40px;
+    /* Spaziatura tra gli elementi */
+    max-width: 1020px;
+    /* Larghezza massima */
+    margin: 0 auto;
+    /* Centra il contenitore */
+    padding: 30px 20px 40px 20px;
+    /* Spaziatura interna */
+    box-sizing: border-box;
+  }
+
+  /* Articolo principale */
+  .section-f-container .article-item:nth-child(1) {
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+    /* Spaziatura tra immagine, titolo, paragrafo e ora */
+  }
+
+  .section-f-container .article-item:nth-child(1) img {
+    max-width: 725px;
+    /* L'immagine occupa tutta la larghezza disponibile */
+    height: auto;
+    /* Mantiene le proporzioni */
+  }
+
+  /* Articoli secondari */
+  .section-f-container .article-item:nth-child(2) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .section-f-container .article-item:nth-child(3) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  .section-f-container .article-item:nth-child(4) {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+
+  .section-f-container .article-item:nth-child(5) {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+  }
+
+  .section-f-container .article-item:nth-child(1) h4 {
+    font-size: 24px;
+  }
+
+  .section-f-container .article-item:nth-child(2) h4,
+  .section-f-container .article-item:nth-child(3) h4,
+  .section-f-container .article-item:nth-child(4) h4,
+  .section-f-container .article-item:nth-child(5) h4 {
+    font-size: 17.12px;
+  }
+}
+
+@media (max-width: 1020px) {
+  .section-f {
+    position: relative;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.8) 70%, rgba(0, 0, 0, 1) 100%), url('https://placehold.co/1020x670');
+    /* Sostituisci con il link dell'immagine dell'articolo 1 */
+    background-size: cover;
+    /* Adatta l'immagine per coprire l'intera sezione */
+    background-position: center;
+    /* Centra l'immagine */
+    background-repeat: no-repeat;
+    /* Evita la ripetizione dell'immagine */
+    height: 670px;
+  }
+
+  .section-f .section-b-title {
+    display: none;
+  }
+
+  .section-f-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* Disposizione verticale */
+    gap: 20px;
+    /* Spaziatura tra le righe */
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+  }
+
+  /* Articolo principale (LIVE e titolo su una riga) */
+  .section-f-container .article-item:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    /* Disposizione orizzontale */
+    align-items: flex-start;
+    /* Allinea verticalmente */
+    gap: 10px;
+    /* Spaziatura tra il label LIVE e il titolo */
+    flex-basis: 100%;
+    /* L'elemento occupa l'intera larghezza disponibile */
+    width: 100%;
+    /* Garantisce che l'elemento occupi tutta la riga */
+  }
+
+  .section-f-container .article-item:nth-child(1) img {
+    display: none;
+    /* Nasconde l'immagine */
+  }
+
+  .section-f-container .article-item:nth-child(1) p {
+    display: none;
+  }
+
+  .section-f-container .live-label {
+    font-size: 14px;
+    /* Dimensione del testo "LIVE" */
+    padding: 4px 8px;
+    /* Spaziatura interna */
+  }
+
+  .section-f-container .article-item:nth-child(1) h4 {
+    font-size: 45.12px;
+    /* Dimensione del titolo */
+    margin: 0;
+  }
+
+  /* Articoli secondari (disposti su una riga) */
+  .section-f-container .article-item:nth-child(n+2) {
+    display: flex;
+    flex-direction: column;
+    /* Disposizione verticale */
+    gap: 10px;
+    /* Spaziatura tra immagine e testo */
+    flex: 1;
+    /* Gli articoli occupano lo stesso spazio */
+  }
+
+  .section-f-container .article-item:nth-child(n+2) h4 {
+    font-size: 13.12px;
+    margin-bottom: 0;
+    max-width: 90%;
+    /* Imposta una larghezza massima per il titolo */
+    word-wrap: break-word;
+    /* Permette il ritorno a capo */
+    word-break: break-word;
+    /* Gestisce il ritorno a capo per parole lunghe */
+    overflow-wrap: break-word;
+    /* Compatibilità con altri browser */
+    margin-bottom: 10px;
+    /* Spaziatura sotto il titolo */
+    line-height: 1.25;
+  }
+
+  .section-f-container .article-item:nth-child(n+2) ul {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Nascondi tutti gli articoli */
+  .section-f-container .article-item:nth-child(1),
+  .section-f-container .article-item:nth-child(2),
+  .section-f-container .article-item:nth-child(3),
+  .section-f-container .article-item:nth-child(4),
+  .section-f-container .article-item:nth-child(5) {
+    display: none;
+  }
+
+  /* Mostra il titolo */
+  .section-f-container .title-container-hidden {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  .section-f-container .title-container-hidden h4 {
+    margin: 0;
+  }
+
+  /* Mostra gli articoli in riga */
+  .section-f-container .articles-container-hidden {
+    display: flex;
+    flex-direction: row;
+    /* Disposizione orizzontale */
+    gap: 20px;
+    /* Spaziatura tra gli articoli */
+    overflow-x: auto;
+    /* Barra di scorrimento orizzontale */
+    white-space: nowrap;
+    /* Impedisce il ritorno a capo */
+    padding: 0 0 10px 0;
+    /* Spaziatura interna */
+    box-sizing: border-box;
+    /* Include padding e bordi */
+    scroll-behavior: smooth;
+    /* Scorrimento fluido */
+  }
+
+  .section-f-container .articles-container-hidden .article-item:nth-child(1) {
+    display: none;
+  }
+
+  /* Styling per gli articoli all'interno */
+  .section-f-container .articles-container-hidden .article-item {
+    display: block;
+    /* Rendi visibili gli articoli */
+    flex: 0 0 auto;
+    /* Mantieni la dimensione originale */
+    width: 167px;
+    /* Larghezza fissa per ogni articolo */
+    text-align: left;
+    /* Allinea il testo a sinistra */
+  }
+
+  .section-f-container .articles-container-hidden .article-item h4 {
+    font-size: 14px; /* Dimensione del titolo */
+    line-height: 1.2; /* Altezza della linea */
+    margin: 5px 0; /* Spaziatura sopra e sotto */
+    white-space: normal; /* Permette il ritorno a capo */
+    word-wrap: break-word; /* Gestisce il ritorno a capo per parole lunghe */
+    overflow-wrap: break-word; /* Compatibilità con altri browser */
+    text-align: left; /* Allinea il testo a sinistra */
+  }
+
+  /* Personalizzazione della barra di scorrimento */
+  .section-f-container .articles-container-hidden::-webkit-scrollbar {
+    height: 4px; /* Riduce l'altezza della barra di scorrimento */
+  }
+
+  .section-f-container .articles-container-hidden::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5); /* Colore della barra */
+    border-radius: 4px; /* Angoli arrotondati */
+    transition: opacity 0.3s ease; /* Transizione per la trasparenza */
+  }
+
+  .section-f-container .articles-container-hidden::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.8); /* Colore più visibile al passaggio del mouse */
+  }
+
+  .section-f-container .articles-container-hidden::-webkit-scrollbar-track {
+    background-color: transparent; /* Sfondo trasparente */
+  }
+
+  .section-f-container .articles-container-hidden {
+    scrollbar-width: thin; /* Per browser compatibili con questa proprietà */
+    scrollbar-color: rgba(255, 255, 255, 0.5) transparent; /* Colore della barra e dello sfondo */
+  }
+
+  .section-f-container .articles-container-hidden:hover::-webkit-scrollbar-thumb {
+    opacity: 1; /* Rende la barra visibile al passaggio del mouse */
+  }
+
+  .section-f-container .articles-container-hidden::-webkit-scrollbar-thumb {
+    opacity: 0; /* Rende la barra trasparente quando non viene utilizzata */
+  }
+}
+
 
 /*----------------------------------------------------------------------------------FOOTER---------------------------------------------------------------------------------------------*/
 
