@@ -2237,7 +2237,8 @@ ul {
   }
 
   .section-c-title .more {
-    display: none; /* Nasconde la scritta "More" e la freccia */
+    display: none;
+    /* Nasconde la scritta "More" e la freccia */
   }
 
   .section-c-container {
@@ -2255,7 +2256,8 @@ ul {
     padding: 10px 20px 20px 20px;
     /* Spaziatura interna */
     box-sizing: border-box;
-    position: relative; /* Necessario per posizionare il bottone */
+    position: relative;
+    /* Necessario per posizionare il bottone */
   }
 
   /* Articolo principale nella prima riga */
@@ -2347,12 +2349,14 @@ ul {
   }
 
   .section-c-container .load-more-btn {
-    display: inline-flex; /* Rende visibile il bottone */
+    display: inline-flex;
+    /* Rende visibile il bottone */
     align-items: center;
     justify-content: center;
     gap: 5px;
     width: 100%;
-    margin: 20px 0 0; /* Centra il bottone sotto gli articoli */
+    margin: 20px 0 0;
+    /* Centra il bottone sotto gli articoli */
     padding: 10px 20px;
     font-size: 16px;
     font-weight: bold;
@@ -2368,10 +2372,12 @@ ul {
   }
 
   .section-c-container .load-more-btn .arrow-right {
-    stroke: black; /* Colore della freccia */
+    stroke: black;
+    /* Colore della freccia */
     width: 14px;
     height: 14px;
-    vertical-align: middle; /* Allinea la freccia al centro del testo */
+    vertical-align: middle;
+    /* Allinea la freccia al centro del testo */
   }
 }
 
@@ -2558,13 +2564,20 @@ ul {
   }
 
   .section-d-container .article-item p {
-    display: -webkit-box; /* Usa un box flessibile */
-    -webkit-line-clamp: 4; /* Mostra solo 4 righe */
-    line-clamp: 4; /* Standard property for compatibility */
-    -webkit-box-orient: vertical; /* Orienta il box verticalmente */
-    overflow: hidden; /* Nasconde il testo in eccesso */
-    text-overflow: ellipsis; /* Aggiunge "..." al testo tagliato */
-    white-space: normal; /* Permette il ritorno a capo */
+    display: -webkit-box;
+    /* Usa un box flessibile */
+    -webkit-line-clamp: 4;
+    /* Mostra solo 4 righe */
+    line-clamp: 4;
+    /* Standard property for compatibility */
+    -webkit-box-orient: vertical;
+    /* Orienta il box verticalmente */
+    overflow: hidden;
+    /* Nasconde il testo in eccesso */
+    text-overflow: ellipsis;
+    /* Aggiunge "..." al testo tagliato */
+    white-space: normal;
+    /* Permette il ritorno a capo */
   }
 }
 
@@ -2635,10 +2648,10 @@ ul {
 }
 
 @media (max-width: 768px) {
-  .section-c-title h3{
+  .section-c-title h3 {
     font-size: 24px;
   }
-    
+
   .section-d-container {
     display: grid;
     grid-template-rows: repeat(4, auto);
@@ -2671,12 +2684,14 @@ ul {
   .section-d-container .load-more-btn {
     grid-column: 1 / 2;
     grid-row: 4 / 5;
-    display: inline-flex; /* Rende visibile il bottone */
+    display: inline-flex;
+    /* Rende visibile il bottone */
     align-items: center;
     justify-content: center;
     gap: 5px;
     width: 100%;
-    margin: 20px auto 0; /* Centra il bottone sotto gli articoli */
+    margin: 20px auto 0;
+    /* Centra il bottone sotto gli articoli */
     padding: 10px 20px;
     font-size: 16px;
     font-weight: bold;
@@ -2692,10 +2707,332 @@ ul {
   }
 
   .section-d-container .load-more-btn .arrow-right {
-    stroke: black; /* Colore della freccia */
+    stroke: black;
+    /* Colore della freccia */
     width: 14px;
     height: 14px;
-    vertical-align: middle; /* Allinea la freccia al centro del testo */
+    vertical-align: middle;
+    /* Allinea la freccia al centro del testo */
+  }
+}
+
+/*-------------------------------------------------SECTION E-----------------------------------------------------------------*/
+
+.section-e {
+  padding: 30px 0;
+  background-color: #00711A;
+  color: rgb(255, 255, 255);
+}
+
+.section-e .more,
+.section-e .arrow-right {
+  color: rgb(255, 255, 255);
+  stroke: rgb(255, 255, 255) !important;
+}
+
+.section-e-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* Quattro colonne di larghezza uguale */
+  gap: 40px 40px;
+  /* Spaziatura tra gli elementi */
+  max-width: 1320px;
+  /* Larghezza massima */
+  margin: 0 auto;
+  /* Centra il contenitore */
+  padding: 0;
+  /* Spaziatura interna */
+  align-items: start;
+  /* Allinea gli elementi in alto */
+}
+
+/* Articolo principale */
+.section-e-container .article-item:nth-child(1) {
+  grid-column: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* Spaziatura tra immagine e testo */
+  align-items: flex-start;
+  /* Allinea gli elementi in alto */
+  overflow: visible;
+  /* Assicura che il contenuto non venga tagliato */
+}
+
+.section-e-container .article-item img {
+  margin: 0;
+  padding: 0;
+}
+
+/* Articoli 2 e 3 sotto al principale */
+.section-e-container .article-item:nth-child(2) {
+  grid-column: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* Spaziatura tra immagine e testo */
+  align-items: flex-start;
+  /* Allinea gli elementi in alto */
+  overflow: visible;
+  /* Assicura che il contenuto non venga tagliato */
+}
+
+.section-e-container .article-item:nth-child(3) {
+  grid-column: 3 / 4;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* Spaziatura tra immagine e testo */
+  align-items: flex-start;
+  /* Allinea gli elementi in alto */
+  overflow: visible;
+  /* Assicura che il contenuto non venga tagliato */
+}
+
+/* Rimuovi i pallini dai <li> della sezione specifica */
+.section-e-container li {
+  font-size: 11.04px;
+  list-style: none;
+  /* Rimuove i pallini */
+  margin: 0 15px 0 0;
+  color: rgb(255, 255, 255);
+}
+
+.section-e-container .article-metadata {
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+.section-e-container .item-related {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+}
+
+.section-e-container a {
+  text-decoration: none;
+  /* Rimuove la sottolineatura */
+  font-size: 15.04px;
+  /* Imposta la dimensione del font */
+  color: #fff;
+  /* Colore bianco */
+  font-weight: 700;
+  /* Imposta il peso del font */
+}
+
+.section-e-container li:nth-child(2) {
+  margin-top: 10px;
+}
+
+.section-e-container h4 {
+  font-family: "Publico Headline", serif;
+}
+
+.section-e-container .article-item:nth-child(1) p,
+.section-e-container .article-item:nth-child(2) p,
+.section-e-container .article-item:nth-child(3) p {
+  font-size: 18.08px;
+  line-height: 1.23;
+  margin: 10px 0 0 0;
+}
+
+.section-e-container .article-item:nth-child(1) h4,
+.section-e-container .article-item:nth-child(2) h4,
+.section-e-container .article-item:nth-child(3) h4 {
+  font-size: 24px;
+  line-height: 1;
+  font-weight: bold;
+  margin: 0 0 10px;
+}
+
+/* Sottolinea il titolo dell'articolo principale solo quando si passa sopra immagine, paragrafo o titolo */
+.section-e-container .article-item .img:hover + .title-container h4,
+.section-e-container .title-container:hover h4 {
+  text-decoration: underline;
+  /* Aggiunge la sottolineatura */
+}
+
+.section-e-container .item-related a:hover {
+  text-decoration: underline;
+  /* Aggiunge la sottolineatura */
+}
+
+.section-e-container .article-item:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 1360px) {
+  .section-c-title {
+    margin-left: auto;
+    /* Aggiunge spaziatura per allineare il titolo */
+    max-width: 1020px;
+    /* Allinea il titolo con il contenitore */
+  }
+
+  .section-c-title h3 {
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-size: 45.12px;
+  }
+
+  .section-c-title .more {
+    top: -5px;
+    /* Sposta leggermente verso l'alto */
+  }
+
+  .section-e-container {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    /* Tre colonne di larghezza uguale */
+    gap: 40px;
+    /* Spaziatura tra gli elementi */
+    max-width: 1020px;
+    /* Larghezza massima */
+    margin: 0 auto;
+    /* Centra il contenitore */
+    padding: 30px 20px 40px 20px;
+    /* Spaziatura interna */
+    box-sizing: border-box;
+  }
+
+  .section-e-container .article-item:nth-child(1) {
+    grid-column: 1 / 2;
+    /* Occupa le prime due colonne */
+    display: flex;
+    flex-direction: column;
+    /* Disposizione verticale */
+    gap: 10px;
+    /* Spaziatura tra immagine, titolo, paragrafo e ora */
+  }
+
+  .section-e-container .article-item:nth-child(2) {
+    grid-column: 2 / 3;
+    /* Occupa le prime due colonne */
+    display: flex;
+    flex-direction: column;
+    /* Disposizione verticale */
+    gap: 10px;
+    /* Spaziatura tra immagine, titolo, paragrafo e ora */
+  }
+
+  .section-e-container .article-item:nth-child(3) {
+    grid-column: 3 / 4;
+    /* Occupa le prime due colonne */
+    display: flex;
+    flex-direction: column;
+    /* Disposizione verticale */
+    gap: 10px;
+    /* Spaziatura tra immagine, titolo, paragrafo e ora */
+  }
+
+  .section-e-container .article-item h4 {
+    font-size: 24px;
+    margin-bottom: 20px !important;
+  }
+}
+
+@media (max-width: 1020px) {
+  .section-c-title {
+    margin-left: 0;
+    padding-left: 20px;
+    /* Aggiunge spaziatura per allineare il titolo */
+  }
+
+  .section-c-title h3 {
+    padding-left: 0;
+    font-size: 32px;
+  }
+
+  .section-e-container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    /* Tre colonne di larghezza uguale */
+    gap: 20px;
+    /* Spaziatura tra gli elementi */
+    max-width: 100%;
+    /* Larghezza massima */
+    margin: 0 auto;
+    /* Centra il contenitore */
+    padding: 30px 20px 40px 20px;
+    /* Spaziatura interna */
+    box-sizing: border-box;
+  }
+
+  .section-e-container p {
+    display: none;
+  }
+
+  .section-e-container h4 {
+    font-size: 17.12px !important;
+  }
+
+  .section-e-container .article-item img {
+    width: 100%; /* L'immagine occupa tutta la larghezza del contenitore */
+    max-width: 313px; /* Limita la larghezza massima */
+    height: auto; /* Mantiene le proporzioni */
+    object-fit: cover; /* Adatta l'immagine senza distorsioni */
+  }
+}
+
+@media (max-width: 768px) {
+  .section-e {
+    padding-bottom: 20px;
+  }
+  .section-e-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: 100%;
+    /* Larghezza massima */
+    margin: 0 auto;
+    /* Centra il contenitore */
+    padding: 30px 20px 0 20px;
+    /* Spaziatura interna */
+    box-sizing: border-box;
+  }
+
+  .section-e-container .article-item img {
+    width: 100%; /* L'immagine occupa tutta la larghezza del contenitore */
+    max-width: 728px; /* Limita la larghezza massima */
+    height: auto; /* Mantiene le proporzioni */
+    object-fit: cover; /* Adatta l'immagine senza distorsioni */
+  }
+
+  .section-e-container ul {
+    margin-top: -10px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .section-e-container .load-more-btn {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    display: inline-flex;
+    /* Rende visibile il bottone */
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+    margin: 20px auto 0;
+    /* Centra il bottone sotto gli articoli */
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background-color: #00711A;
+    border: 0.5px solid #e8e8e8;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-sizing: border-box;
+  }
+
+  .section-e-container .load-more-btn .arrow-right {
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    /* Allinea la freccia al centro del testo */
   }
 }
 
