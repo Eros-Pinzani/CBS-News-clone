@@ -3428,7 +3428,6 @@ ul {
 }
 
 @media (max-width: 768px) {
-
   /* Nascondi tutti gli articoli */
   .section-f-container .article-item:nth-child(1),
   .section-f-container .article-item:nth-child(2),
@@ -3488,48 +3487,390 @@ ul {
   }
 
   .section-f-container .articles-container-hidden .article-item h4 {
-    font-size: 14px; /* Dimensione del titolo */
-    line-height: 1.2; /* Altezza della linea */
-    margin: 5px 0; /* Spaziatura sopra e sotto */
-    white-space: normal; /* Permette il ritorno a capo */
-    word-wrap: break-word; /* Gestisce il ritorno a capo per parole lunghe */
-    overflow-wrap: break-word; /* Compatibilità con altri browser */
-    text-align: left; /* Allinea il testo a sinistra */
+    font-size: 14px;
+    /* Dimensione del titolo */
+    line-height: 1.2;
+    /* Altezza della linea */
+    margin: 5px 0;
+    /* Spaziatura sopra e sotto */
+    white-space: normal;
+    /* Permette il ritorno a capo */
+    word-wrap: break-word;
+    /* Gestisce il ritorno a capo per parole lunghe */
+    overflow-wrap: break-word;
+    /* Compatibilità con altri browser */
+    text-align: left;
+    /* Allinea il testo a sinistra */
   }
 
   /* Personalizzazione della barra di scorrimento */
   .section-f-container .articles-container-hidden::-webkit-scrollbar {
-    height: 4px; /* Riduce l'altezza della barra di scorrimento */
+    height: 4px;
+    /* Riduce l'altezza della barra di scorrimento */
   }
 
   .section-f-container .articles-container-hidden::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.5); /* Colore della barra */
-    border-radius: 4px; /* Angoli arrotondati */
-    transition: opacity 0.3s ease; /* Transizione per la trasparenza */
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Colore della barra */
+    border-radius: 4px;
+    /* Angoli arrotondati */
+    transition: opacity 0.3s ease;
+    /* Transizione per la trasparenza */
   }
 
   .section-f-container .articles-container-hidden::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(255, 255, 255, 0.8); /* Colore più visibile al passaggio del mouse */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Colore più visibile al passaggio del mouse */
   }
 
   .section-f-container .articles-container-hidden::-webkit-scrollbar-track {
-    background-color: transparent; /* Sfondo trasparente */
+    background-color: transparent;
+    /* Sfondo trasparente */
   }
 
   .section-f-container .articles-container-hidden {
-    scrollbar-width: thin; /* Per browser compatibili con questa proprietà */
-    scrollbar-color: rgba(255, 255, 255, 0.5) transparent; /* Colore della barra e dello sfondo */
+    scrollbar-width: thin;
+    /* Per browser compatibili con questa proprietà */
+    scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
+    /* Colore della barra e dello sfondo */
   }
 
   .section-f-container .articles-container-hidden:hover::-webkit-scrollbar-thumb {
-    opacity: 1; /* Rende la barra visibile al passaggio del mouse */
+    opacity: 1;
+    /* Rende la barra visibile al passaggio del mouse */
   }
 
   .section-f-container .articles-container-hidden::-webkit-scrollbar-thumb {
-    opacity: 0; /* Rende la barra trasparente quando non viene utilizzata */
+    opacity: 0;
+    /* Rende la barra trasparente quando non viene utilizzata */
   }
 }
 
+/*-------------------------------------------------SECTION G-----------------------------------------------------------------*/
+
+.section-g {
+  background-color: white; /* Sfondo bianco */
+  padding: 20px 0; /* Spaziatura interna sopra e sotto */
+}
+
+.section-g-wrapper {
+  max-width: 1320px; /* Larghezza massima */
+  margin: 0 auto; /* Centra il contenitore */
+  padding: 0 20px; /* Spaziatura interna laterale */
+}
+
+.section-g-title .component-title-hidden {
+  display: none; /* Nasconde il titolo */
+}
+
+.section-g-title {
+  display: flex;
+  align-items: center; /* Allinea verticalmente gli elementi */
+  justify-content: flex-start; /* Spaziatura tra titolo e link */
+  gap: 0;
+  margin-bottom: 20px;
+}
+
+.section-g-title h3 {
+  font-size: 11.04px; /* Dimensione del font del titolo */
+  font-weight: bold; /* Grassetto */
+  color: white; /* Colore del testo */
+  background: linear-gradient(225deg, #DE3D05 0%, #B60505 100%); /* Sfondo rosso */
+  padding: 15px 20px; /* Spaziatura interna */
+  border-radius: 0; /* Angoli arrotondati */
+  display: inline-block; /* Assicura che il rettangolo si adatti al testo */
+  letter-spacing: 1.7px;
+}
+
+.section-g-title .white-dot {
+  display: inline-block;
+  width: 6px; /* Riduce la dimensione del pallino */
+  height: 6px; /* Riduce la dimensione del pallino */
+  background-color: white; /* Colore del pallino */
+  border-radius: 50%; /* Rende il pallino circolare */
+  margin-left: 0; /* Spaziatura tra il testo e il pallino */
+}
+
+.section-g-title .view-more {
+  font-size: 13.12px; /* Dimensione del font del link */
+  font-weight: bold;
+  color: black; /* Colore del link */
+  text-decoration: none; /* Rimuove la sottolineatura */
+  display: flex;
+  align-items: center; /* Allinea l'icona con il testo */
+  border: 1px solid #d3d3d3; /* Bordino grigio sottile */
+  padding: 12px 18px 13px 18px; /* Spaziatura interna */
+  border-radius: 0; /* Angoli arrotondati */
+  letter-spacing: 0.3px;
+}
+
+.section-g-title .view-more svg {
+  margin-left: 5px; /* Spaziatura tra il testo e l'icona */
+}
+
+.section-g-title .view-more:hover {
+  text-decoration: underline; /* Sottolinea la scritta al passaggio del mouse */
+}
+
+.component-item-wrapper {
+  display: flex;
+  gap: 20px; /* Spaziatura tra gli articoli */
+  overflow-x: auto; /* Barra di scorrimento orizzontale */
+  padding-bottom: 10px; /* Spaziatura sotto */
+  align-items: center; /* Allinea verticalmente gli articoli */
+  justify-content: space-between;
+}
+
+.component-item-wrapper .item {
+  flex: 0 0 auto; /* Mantiene la dimensione originale degli articoli */
+  width: 300px; /* Larghezza fissa per ogni articolo */
+  background-color: #0674C8; /* Colore di sfondo blu */
+  color: white; /* Colore del testo */
+  border-radius: 4px; /* Angoli arrotondati */
+  display: flex; /* Disposizione orizzontale */
+  align-items: center; /* Allinea verticalmente il contenuto */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra leggera */
+  position: relative; /* Necessario per la linea divisoria */
+  height: auto; /* Imposta la stessa altezza dell'immagine */
+}
+
+.component-item-wrapper .item a {
+  display: flex; /* Disposizione orizzontale */
+  align-items: center; /* Allinea verticalmente il contenuto */
+  justify-content: space-between; /* Spaziatura tra immagine e testo */
+  width: 100%; /* L'elemento occupa tutta la larghezza del contenitore */
+  height: 83px;
+  text-decoration: none; /* Rimuove la sottolineatura */
+  color: inherit; /* Mantiene il colore del testo */
+}
+
+.component-item-wrapper .item .left {
+  flex: 0 0 83px; /* Larghezza fissa per la colonna sinistra */
+  display: flex;
+  justify-content: center; /* Centra l'immagine orizzontalmente */
+  align-items: center; /* Centra l'immagine verticalmente */
+  position: relative; /* Necessario per sovrapporre gli elementi */
+  height: 100%; /* Assicura che il contenitore occupi tutta l'altezza del box blu */
+}
+
+.component-item-wrapper .item .left picture,
+.component-item-wrapper .item .left img {
+  position: relative; /* Cambia da absolute a relative per evitare disallineamenti */
+  top: 1px;
+  width: 83px; /* Larghezza dell'immagine */
+  height: 83px; /* Altezza dell'immagine */
+  object-fit: cover; /* Adatta l'immagine senza distorsioni */
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+.component-item-wrapper .item .right {
+  flex: 1; /* La colonna destra occupa lo spazio rimanente */
+  display: flex;
+  flex-direction: column; /* Disposizione verticale */
+  justify-content: center; /* Centra il testo verticalmente */
+  margin: 0 0 0 16px;
+  padding: 0 0 0 16px;
+}
+
+.component-item-wrapper .item .right h4 {
+  font-size: 13.12px; /* Dimensione del font del titolo */
+  font-weight: bold; /* Grassetto */
+  margin: 0; /* Rimuove i margini */
+  line-height: 1.16; /* Altezza della linea */
+}
+
+.component-item-wrapper .item .divider {
+  position: absolute;
+  left: 100px; /* Sposta la linea più a destra */
+  top: 10px; /* Allinea la linea verticalmente */
+  bottom: 10px; /* Allinea la linea verticalmente */
+  width: 1px; /* Spessore della linea */
+  background-color: white; /* Colore della linea */
+}
+
+/* Nascondi gli articoli dal quinto in poi */
+.component-item-wrapper .item:nth-child(n+5) {
+  display: none; /* Nasconde gli articoli dal quinto in su */
+}
+
+@media (max-width: 1360px) {
+  .section-g-wrapper {
+    max-width: 1020px; /* Larghezza massima */
+    margin: 0 auto; /* Centra il contenitore */
+    padding: 0 20px; /* Spaziatura interna laterale */
+  }
+
+  .component-item-wrapper .item {
+    width: 215px; /* Larghezza del box blu */
+    height: 88px; /* Altezza del box blu */
+  }
+
+  .component-item-wrapper .item a {
+    height: 88px; /* Imposta anche l'altezza del link interno */
+  }
+
+  .component-item-wrapper .item .left {
+    height: 88px; /* Allinea l'altezza del contenitore sinistro */
+  }
+
+  .component-item-wrapper .item .left picture,
+  .component-item-wrapper .item .left img {
+    height: 88px; /* Imposta l'altezza dell'immagine */
+    width: 88px; /* Mantieni proporzioni corrette */
+  }
+
+  .component-item-wrapper .item .right {
+    padding: 0 10px 0 8px; /* Riduce la spaziatura a sinistra */
+  }
+
+  .component-item-wrapper .item .right h4 {
+    display: -webkit-box; /* Usa un box flessibile */
+    -webkit-line-clamp: 4; /* Mostra solo 4 righe */
+    line-clamp: 4; /* Standard property for compatibility */
+    -webkit-box-orient: vertical; /* Orienta il box verticalmente */
+    overflow: hidden; /* Nasconde il testo in eccesso */
+    text-overflow: ellipsis; /* Aggiunge "..." al testo tagliato */
+    white-space: normal; /* Permette il ritorno a capo */
+  }
+}
+
+@media (max-width: 1020px) {
+  .section-g-title {
+    margin: 0;
+  }
+  
+  .component-item-wrapper {
+    position: relative; /* Assicura che il wrapper degli articoli non venga sovrapposto */
+    display: flex;
+    flex-direction: row; /* Disposizione orizzontale */
+    gap: 16px; /* Spaziatura tra gli articoli */
+    overflow-x: auto; /* Abilita lo scorrimento orizzontale */
+    justify-content: space-between; /* Allinea gli articoli a sinistra */
+    padding: 20px 0; /* Aggiunge spazio sopra e sotto gli articoli */
+  }
+
+  .component-item-wrapper .item {
+    flex: 1 1 calc(25% - 16px);
+    background-color: transparent;
+    box-shadow: none;
+    max-width: 230px;
+    min-width: 167px;
+    display: flex; /* Disposizione orizzontale */
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .component-item-wrapper .item a {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column; /* Disposizione verticale per mettere il testo sotto l'immagine */
+    text-align: left;
+    width: 100%; /* L'elemento occupa tutta la larghezza del contenitore */
+    height: auto; /* Altezza adattabile */
+  }
+
+  .component-item-wrapper .item .left {
+    position: relative;
+    width: 100%; /* L'immagine occupa tutta la larghezza */
+    height: auto; /* Altezza adattabile */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .component-item-wrapper .item .left picture,
+  .component-item-wrapper .item .left img {
+    width: 100%; /* L'immagine occupa tutta la larghezza */
+    max-width: 230px;
+    height: auto; /* Mantiene le proporzioni */
+    object-fit: cover; /* Adatta l'immagine senza distorsioni */
+    border-radius: 0; /* Rimuove gli angoli arrotondati */
+  }
+
+  .component-item-wrapper .item .right {
+    padding: 8px 0; /* Spaziatura sopra e sotto */
+    margin: 0;
+    width: 100%; /* L'articolo occupa tutta la larghezza */
+    text-align: left;
+  }
+
+  .component-item-wrapper .item .right h4 {
+    color: black; /* Cambia il colore del titolo in nero */
+    font-size: 12px; /* Mantiene la dimensione del font */
+    line-height: 1.4; /* Migliora la leggibilità */
+    white-space: normal; /* Permette il ritorno a capo */
+    overflow: hidden; /* Nasconde il testo in eccesso */
+    text-overflow: ellipsis; /* Aggiunge "..." al testo tagliato */
+  }
+
+  .component-item-wrapper .item:nth-child(1) .right h4 {
+    margin-bottom: 17px;
+  }
+
+  .component-item-wrapper .item .divider {
+    display: none; /* Nasconde la barra separatrice */
+  }
+}
+
+@media (max-width: 768px) {
+  .section-g-title .component-title {
+    display: none; /* Nasconde il titolo */
+  }
+
+  .section-g-title .component-title-hidden {
+    display: block; /* Mostra il titolo */
+  }
+
+  .section-g-title {
+    margin: 0;
+  }
+
+  .section-g-title h3 {
+    font-family: "Publico Headline", serif; /* Cambia il font */
+    font-size: 24px; /* Imposta la dimensione del font */
+    font-weight: bold; /* Mantiene il grassetto */
+    color: black; /* Cambia il colore del testo in nero */
+    background: none; /* Rimuove lo sfondo rosso */
+    padding: 0; /* Rimuove la spaziatura interna */
+    margin: 0;
+    border-radius: 0; /* Rimuove gli angoli arrotondati */
+    letter-spacing: normal; /* Rimuove lo spacing extra */
+  }
+
+  .section-g-title .white-dot,
+  .section-g-title .view-more {
+    display: none; /* Nasconde il pallino bianco e il link accanto */
+  }
+
+  .component-item-wrapper .item:nth-child(n+5) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .component-item-wrapper .item:nth-child(n+5) h4 {
+    color: black; /* Cambia il colore del titolo in nero */
+    font-size: 12px; /* Mantiene la dimensione del font */
+    line-height: 1.4; /* Migliora la leggibilità */
+    white-space: normal; /* Permette il ritorno a capo */
+    overflow: hidden; /* Nasconde il testo in eccesso */
+    text-overflow: ellipsis; /* Aggiunge "..." al testo tagliato */
+    margin: 0;
+  }
+
+  .component-item-wrapper .item:nth-child(n+5) .down {
+    padding: 8px 0;
+  }
+
+  .component-item-wrapper .item:nth-last-child(-n+2) .down h4 {
+    margin-bottom: 18px;
+  }
+
+  .component-item-wrapper .item:nth-last-child(-n+2) .down {
+    width: 100%;
+  }
+}
 
 /*----------------------------------------------------------------------------------FOOTER---------------------------------------------------------------------------------------------*/
 
