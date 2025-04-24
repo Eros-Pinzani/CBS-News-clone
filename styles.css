@@ -7,7 +7,7 @@ body {
   min-height: 100vh;
 }
 
-/*----------------------------------------------------------------------------------HEADER---------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------HEADER-----------------------------------------------------------------*/
 
 .cbs-header {
   position: fixed;
@@ -319,7 +319,7 @@ ul {
   /* Sfondo grigio chiaro semitrasparente */
 }
 
-/*-------------------------------------------------------------------------------BURGER MENU-------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------BURGER MENU-----------------------------------------------------------------*/
 
 /* 9-square grid for burger menu */
 .burger-menu .grid-icon {
@@ -488,7 +488,7 @@ ul {
   /* Impedisce lo scorrimento verticale */
 }
 
-/*------------------------------------------------------------------------ UNDER HEADER ---------------------------------------------------------------------------*/
+/*-------------------------------------------------UNDER HEADER-----------------------------------------------------------------*/
 
 .under-header {
   background-color: #fff;
@@ -543,10 +543,9 @@ ul {
 }
 
 
-/*---------------------------------------------------------------------------- BODY -------------------------------------------------------------------------------*/
+/*-------------------------------------------------BODY-----------------------------------------------------------------*/
 
-/* Contenitore principale della sezione */
-
+/*-------------------------------------------------SECTION A-----------------------------------------------------------------*/
 .section-a-wrapper {
   width: 100%;
   /* Occupa tutta la larghezza visibile */
@@ -3056,7 +3055,7 @@ ul {
   margin-top: 40px;
 }
 
-.section-f .section-b-title {
+.section-with-background-color-wrapper .section-b-title {
   display: flex;
   align-items: flex-end;
   /* Allinea il titolo e "More" in basso */
@@ -3066,7 +3065,7 @@ ul {
   max-width: 1320px;
 }
 
-.section-f .section-b-title h3 {
+.section-with-background-color-wrapper .section-b-title h3 {
   font-family: "Publico Headline", serif;
   font-size: 56px;
   font-weight: 900;
@@ -3244,14 +3243,14 @@ ul {
 }
 
 @media (max-width: 1360px) {
-  .section-f .section-b-title {
+  .section-with-background-color-wrapper .section-b-title {
     margin-left: auto;
     /* Aggiunge spaziatura per allineare il titolo */
     max-width: 1020px;
     /* Allinea il titolo con il contenitore */
   }
 
-  .section-f .section-b-title h3 {
+  .section-with-background-color-wrapper .section-b-title h3 {
     padding-left: 20px;
     margin-bottom: 0;
     font-size: 45.12px;
@@ -3338,7 +3337,7 @@ ul {
     height: 670px;
   }
 
-  .section-f .section-b-title {
+  .section-with-background-color-wrapper .section-b-title {
     display: none;
   }
 
@@ -3428,6 +3427,7 @@ ul {
 }
 
 @media (max-width: 768px) {
+
   /* Nascondi tutti gli articoli */
   .section-f-container .article-item:nth-child(1),
   .section-f-container .article-item:nth-child(2),
@@ -3549,189 +3549,277 @@ ul {
 /*-------------------------------------------------SECTION G-----------------------------------------------------------------*/
 
 .section-g {
-  background-color: white; /* Sfondo bianco */
-  padding: 20px 0; /* Spaziatura interna sopra e sotto */
+  background-color: white;
+  /* Sfondo bianco */
+  padding: 20px 0;
+  /* Spaziatura interna sopra e sotto */
 }
 
 .section-g-wrapper {
-  max-width: 1320px; /* Larghezza massima */
-  margin: 0 auto; /* Centra il contenitore */
-  padding: 0 20px; /* Spaziatura interna laterale */
+  max-width: 1320px;
+  /* Larghezza massima */
+  margin: 0 auto;
+  /* Centra il contenitore */
+  padding: 0 20px;
+  /* Spaziatura interna laterale */
 }
 
 .section-g-title .component-title-hidden {
-  display: none; /* Nasconde il titolo */
+  display: none;
+  /* Nasconde il titolo */
 }
 
 .section-g-title {
   display: flex;
-  align-items: center; /* Allinea verticalmente gli elementi */
-  justify-content: flex-start; /* Spaziatura tra titolo e link */
+  align-items: center;
+  /* Allinea verticalmente gli elementi */
+  justify-content: flex-start;
+  /* Spaziatura tra titolo e link */
   gap: 0;
   margin-bottom: 20px;
 }
 
 .section-g-title h3 {
-  font-size: 11.04px; /* Dimensione del font del titolo */
-  font-weight: bold; /* Grassetto */
-  color: white; /* Colore del testo */
-  background: linear-gradient(225deg, #DE3D05 0%, #B60505 100%); /* Sfondo rosso */
-  padding: 15px 20px; /* Spaziatura interna */
-  border-radius: 0; /* Angoli arrotondati */
-  display: inline-block; /* Assicura che il rettangolo si adatti al testo */
+  font-size: 11.04px;
+  /* Dimensione del font del titolo */
+  font-weight: bold;
+  /* Grassetto */
+  color: white;
+  /* Colore del testo */
+  background: linear-gradient(225deg, #DE3D05 0%, #B60505 100%);
+  /* Sfondo rosso */
+  padding: 15px 20px;
+  /* Spaziatura interna */
+  border-radius: 0;
+  /* Angoli arrotondati */
+  display: inline-block;
+  /* Assicura che il rettangolo si adatti al testo */
   letter-spacing: 1.7px;
 }
 
 .section-g-title .white-dot {
   display: inline-block;
-  width: 6px; /* Riduce la dimensione del pallino */
-  height: 6px; /* Riduce la dimensione del pallino */
-  background-color: white; /* Colore del pallino */
-  border-radius: 50%; /* Rende il pallino circolare */
-  margin-left: 0; /* Spaziatura tra il testo e il pallino */
+  width: 6px;
+  /* Riduce la dimensione del pallino */
+  height: 6px;
+  /* Riduce la dimensione del pallino */
+  background-color: white;
+  /* Colore del pallino */
+  border-radius: 50%;
+  /* Rende il pallino circolare */
+  margin-left: 0;
+  /* Spaziatura tra il testo e il pallino */
 }
 
 .section-g-title .view-more {
-  font-size: 13.12px; /* Dimensione del font del link */
+  font-size: 13.12px;
+  /* Dimensione del font del link */
   font-weight: bold;
-  color: black; /* Colore del link */
-  text-decoration: none; /* Rimuove la sottolineatura */
+  color: black;
+  /* Colore del link */
+  text-decoration: none;
+  /* Rimuove la sottolineatura */
   display: flex;
-  align-items: center; /* Allinea l'icona con il testo */
-  border: 1px solid #d3d3d3; /* Bordino grigio sottile */
-  padding: 12px 18px 13px 18px; /* Spaziatura interna */
-  border-radius: 0; /* Angoli arrotondati */
+  align-items: center;
+  /* Allinea l'icona con il testo */
+  border: 1px solid #d3d3d3;
+  /* Bordino grigio sottile */
+  padding: 12px 18px 13px 18px;
+  /* Spaziatura interna */
+  border-radius: 0;
+  /* Angoli arrotondati */
   letter-spacing: 0.3px;
 }
 
 .section-g-title .view-more svg {
-  margin-left: 5px; /* Spaziatura tra il testo e l'icona */
+  margin-left: 5px;
+  /* Spaziatura tra il testo e l'icona */
 }
 
 .section-g-title .view-more:hover {
-  text-decoration: underline; /* Sottolinea la scritta al passaggio del mouse */
+  text-decoration: underline;
+  /* Sottolinea la scritta al passaggio del mouse */
 }
 
 .component-item-wrapper {
   display: flex;
-  gap: 20px; /* Spaziatura tra gli articoli */
-  overflow-x: auto; /* Barra di scorrimento orizzontale */
-  padding-bottom: 10px; /* Spaziatura sotto */
-  align-items: center; /* Allinea verticalmente gli articoli */
+  gap: 20px;
+  /* Spaziatura tra gli articoli */
+  overflow-x: auto;
+  /* Barra di scorrimento orizzontale */
+  padding-bottom: 10px;
+  /* Spaziatura sotto */
+  align-items: center;
+  /* Allinea verticalmente gli articoli */
   justify-content: space-between;
 }
 
 .component-item-wrapper .item {
-  flex: 0 0 auto; /* Mantiene la dimensione originale degli articoli */
-  width: 300px; /* Larghezza fissa per ogni articolo */
-  background-color: #0674C8; /* Colore di sfondo blu */
-  color: white; /* Colore del testo */
-  border-radius: 4px; /* Angoli arrotondati */
-  display: flex; /* Disposizione orizzontale */
-  align-items: center; /* Allinea verticalmente il contenuto */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra leggera */
-  position: relative; /* Necessario per la linea divisoria */
-  height: auto; /* Imposta la stessa altezza dell'immagine */
+  flex: 0 0 auto;
+  /* Mantiene la dimensione originale degli articoli */
+  width: 300px;
+  /* Larghezza fissa per ogni articolo */
+  background-color: #0674C8;
+  /* Colore di sfondo blu */
+  color: white;
+  /* Colore del testo */
+  border-radius: 4px;
+  /* Angoli arrotondati */
+  display: flex;
+  /* Disposizione orizzontale */
+  align-items: center;
+  /* Allinea verticalmente il contenuto */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Aggiunge un'ombra leggera */
+  position: relative;
+  /* Necessario per la linea divisoria */
+  height: auto;
+  /* Imposta la stessa altezza dell'immagine */
 }
 
 .component-item-wrapper .item a {
-  display: flex; /* Disposizione orizzontale */
-  align-items: center; /* Allinea verticalmente il contenuto */
-  justify-content: space-between; /* Spaziatura tra immagine e testo */
-  width: 100%; /* L'elemento occupa tutta la larghezza del contenitore */
+  display: flex;
+  /* Disposizione orizzontale */
+  align-items: center;
+  /* Allinea verticalmente il contenuto */
+  justify-content: space-between;
+  /* Spaziatura tra immagine e testo */
+  width: 100%;
+  /* L'elemento occupa tutta la larghezza del contenitore */
   height: 83px;
-  text-decoration: none; /* Rimuove la sottolineatura */
-  color: inherit; /* Mantiene il colore del testo */
+  text-decoration: none;
+  /* Rimuove la sottolineatura */
+  color: inherit;
+  /* Mantiene il colore del testo */
 }
 
 .component-item-wrapper .item .left {
-  flex: 0 0 83px; /* Larghezza fissa per la colonna sinistra */
+  flex: 0 0 83px;
+  /* Larghezza fissa per la colonna sinistra */
   display: flex;
-  justify-content: center; /* Centra l'immagine orizzontalmente */
-  align-items: center; /* Centra l'immagine verticalmente */
-  position: relative; /* Necessario per sovrapporre gli elementi */
-  height: 100%; /* Assicura che il contenitore occupi tutta l'altezza del box blu */
+  justify-content: center;
+  /* Centra l'immagine orizzontalmente */
+  align-items: center;
+  /* Centra l'immagine verticalmente */
+  position: relative;
+  /* Necessario per sovrapporre gli elementi */
+  height: 100%;
+  /* Assicura che il contenitore occupi tutta l'altezza del box blu */
 }
 
 .component-item-wrapper .item .left picture,
 .component-item-wrapper .item .left img {
-  position: relative; /* Cambia da absolute a relative per evitare disallineamenti */
+  position: relative;
+  /* Cambia da absolute a relative per evitare disallineamenti */
   top: 1px;
-  width: 83px; /* Larghezza dell'immagine */
-  height: 83px; /* Altezza dell'immagine */
-  object-fit: cover; /* Adatta l'immagine senza distorsioni */
+  width: 83px;
+  /* Larghezza dell'immagine */
+  height: 83px;
+  /* Altezza dell'immagine */
+  object-fit: cover;
+  /* Adatta l'immagine senza distorsioni */
   border-bottom-left-radius: 4px;
   border-top-left-radius: 4px;
 }
 
 .component-item-wrapper .item .right {
-  flex: 1; /* La colonna destra occupa lo spazio rimanente */
+  flex: 1;
+  /* La colonna destra occupa lo spazio rimanente */
   display: flex;
-  flex-direction: column; /* Disposizione verticale */
-  justify-content: center; /* Centra il testo verticalmente */
+  flex-direction: column;
+  /* Disposizione verticale */
+  justify-content: center;
+  /* Centra il testo verticalmente */
   margin: 0 0 0 16px;
   padding: 0 0 0 16px;
 }
 
 .component-item-wrapper .item .right h4 {
-  font-size: 13.12px; /* Dimensione del font del titolo */
-  font-weight: bold; /* Grassetto */
-  margin: 0; /* Rimuove i margini */
-  line-height: 1.16; /* Altezza della linea */
+  font-size: 13.12px;
+  /* Dimensione del font del titolo */
+  font-weight: bold;
+  /* Grassetto */
+  margin: 0;
+  /* Rimuove i margini */
+  line-height: 1.16;
+  /* Altezza della linea */
 }
 
 .component-item-wrapper .item .divider {
   position: absolute;
-  left: 100px; /* Sposta la linea più a destra */
-  top: 10px; /* Allinea la linea verticalmente */
-  bottom: 10px; /* Allinea la linea verticalmente */
-  width: 1px; /* Spessore della linea */
-  background-color: white; /* Colore della linea */
+  left: 100px;
+  /* Sposta la linea più a destra */
+  top: 10px;
+  /* Allinea la linea verticalmente */
+  bottom: 10px;
+  /* Allinea la linea verticalmente */
+  width: 1px;
+  /* Spessore della linea */
+  background-color: white;
+  /* Colore della linea */
 }
 
 /* Nascondi gli articoli dal quinto in poi */
 .component-item-wrapper .item:nth-child(n+5) {
-  display: none; /* Nasconde gli articoli dal quinto in su */
+  display: none;
+  /* Nasconde gli articoli dal quinto in su */
 }
 
 @media (max-width: 1360px) {
   .section-g-wrapper {
-    max-width: 1020px; /* Larghezza massima */
-    margin: 0 auto; /* Centra il contenitore */
-    padding: 0 20px; /* Spaziatura interna laterale */
+    max-width: 1020px;
+    /* Larghezza massima */
+    margin: 0 auto;
+    /* Centra il contenitore */
+    padding: 0 20px;
+    /* Spaziatura interna laterale */
   }
 
   .component-item-wrapper .item {
-    width: 215px; /* Larghezza del box blu */
-    height: 88px; /* Altezza del box blu */
+    width: 215px;
+    /* Larghezza del box blu */
+    height: 88px;
+    /* Altezza del box blu */
   }
 
   .component-item-wrapper .item a {
-    height: 88px; /* Imposta anche l'altezza del link interno */
+    height: 88px;
+    /* Imposta anche l'altezza del link interno */
   }
 
   .component-item-wrapper .item .left {
-    height: 88px; /* Allinea l'altezza del contenitore sinistro */
+    height: 88px;
+    /* Allinea l'altezza del contenitore sinistro */
   }
 
   .component-item-wrapper .item .left picture,
   .component-item-wrapper .item .left img {
-    height: 88px; /* Imposta l'altezza dell'immagine */
-    width: 88px; /* Mantieni proporzioni corrette */
+    height: 88px;
+    /* Imposta l'altezza dell'immagine */
+    width: 88px;
+    /* Mantieni proporzioni corrette */
   }
 
   .component-item-wrapper .item .right {
-    padding: 0 10px 0 8px; /* Riduce la spaziatura a sinistra */
+    padding: 0 10px 0 8px;
+    /* Riduce la spaziatura a sinistra */
   }
 
   .component-item-wrapper .item .right h4 {
-    display: -webkit-box; /* Usa un box flessibile */
-    -webkit-line-clamp: 4; /* Mostra solo 4 righe */
-    line-clamp: 4; /* Standard property for compatibility */
-    -webkit-box-orient: vertical; /* Orienta il box verticalmente */
-    overflow: hidden; /* Nasconde il testo in eccesso */
-    text-overflow: ellipsis; /* Aggiunge "..." al testo tagliato */
-    white-space: normal; /* Permette il ritorno a capo */
+    display: -webkit-box;
+    /* Usa un box flessibile */
+    -webkit-line-clamp: 4;
+    /* Mostra solo 4 righe */
+    line-clamp: 4;
+    /* Standard property for compatibility */
+    -webkit-box-orient: vertical;
+    /* Orienta il box verticalmente */
+    overflow: hidden;
+    /* Nasconde il testo in eccesso */
+    text-overflow: ellipsis;
+    /* Aggiunge "..." al testo tagliato */
+    white-space: normal;
+    /* Permette il ritorno a capo */
   }
 }
 
@@ -3739,15 +3827,21 @@ ul {
   .section-g-title {
     margin: 0;
   }
-  
+
   .component-item-wrapper {
-    position: relative; /* Assicura che il wrapper degli articoli non venga sovrapposto */
+    position: relative;
+    /* Assicura che il wrapper degli articoli non venga sovrapposto */
     display: flex;
-    flex-direction: row; /* Disposizione orizzontale */
-    gap: 16px; /* Spaziatura tra gli articoli */
-    overflow-x: auto; /* Abilita lo scorrimento orizzontale */
-    justify-content: space-between; /* Allinea gli articoli a sinistra */
-    padding: 20px 0; /* Aggiunge spazio sopra e sotto gli articoli */
+    flex-direction: row;
+    /* Disposizione orizzontale */
+    gap: 16px;
+    /* Spaziatura tra gli articoli */
+    overflow-x: auto;
+    /* Abilita lo scorrimento orizzontale */
+    justify-content: space-between;
+    /* Allinea gli articoli a sinistra */
+    padding: 20px 0;
+    /* Aggiunge spazio sopra e sotto gli articoli */
   }
 
   .component-item-wrapper .item {
@@ -3756,7 +3850,8 @@ ul {
     box-shadow: none;
     max-width: 230px;
     min-width: 167px;
-    display: flex; /* Disposizione orizzontale */
+    display: flex;
+    /* Disposizione orizzontale */
     flex-direction: column;
     align-items: center;
     height: auto;
@@ -3765,16 +3860,21 @@ ul {
   .component-item-wrapper .item a {
     background-color: transparent;
     display: flex;
-    flex-direction: column; /* Disposizione verticale per mettere il testo sotto l'immagine */
+    flex-direction: column;
+    /* Disposizione verticale per mettere il testo sotto l'immagine */
     text-align: left;
-    width: 100%; /* L'elemento occupa tutta la larghezza del contenitore */
-    height: auto; /* Altezza adattabile */
+    width: 100%;
+    /* L'elemento occupa tutta la larghezza del contenitore */
+    height: auto;
+    /* Altezza adattabile */
   }
 
   .component-item-wrapper .item .left {
     position: relative;
-    width: 100%; /* L'immagine occupa tutta la larghezza */
-    height: auto; /* Altezza adattabile */
+    width: 100%;
+    /* L'immagine occupa tutta la larghezza */
+    height: auto;
+    /* Altezza adattabile */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -3782,27 +3882,39 @@ ul {
 
   .component-item-wrapper .item .left picture,
   .component-item-wrapper .item .left img {
-    width: 100%; /* L'immagine occupa tutta la larghezza */
+    width: 100%;
+    /* L'immagine occupa tutta la larghezza */
     max-width: 230px;
-    height: auto; /* Mantiene le proporzioni */
-    object-fit: cover; /* Adatta l'immagine senza distorsioni */
-    border-radius: 0; /* Rimuove gli angoli arrotondati */
+    height: auto;
+    /* Mantiene le proporzioni */
+    object-fit: cover;
+    /* Adatta l'immagine senza distorsioni */
+    border-radius: 0;
+    /* Rimuove gli angoli arrotondati */
   }
 
   .component-item-wrapper .item .right {
-    padding: 8px 0; /* Spaziatura sopra e sotto */
+    padding: 8px 0;
+    /* Spaziatura sopra e sotto */
     margin: 0;
-    width: 100%; /* L'articolo occupa tutta la larghezza */
+    width: 100%;
+    /* L'articolo occupa tutta la larghezza */
     text-align: left;
   }
 
   .component-item-wrapper .item .right h4 {
-    color: black; /* Cambia il colore del titolo in nero */
-    font-size: 12px; /* Mantiene la dimensione del font */
-    line-height: 1.4; /* Migliora la leggibilità */
-    white-space: normal; /* Permette il ritorno a capo */
-    overflow: hidden; /* Nasconde il testo in eccesso */
-    text-overflow: ellipsis; /* Aggiunge "..." al testo tagliato */
+    color: black;
+    /* Cambia il colore del titolo in nero */
+    font-size: 12px;
+    /* Mantiene la dimensione del font */
+    line-height: 1.4;
+    /* Migliora la leggibilità */
+    white-space: normal;
+    /* Permette il ritorno a capo */
+    overflow: hidden;
+    /* Nasconde il testo in eccesso */
+    text-overflow: ellipsis;
+    /* Aggiunge "..." al testo tagliato */
   }
 
   .component-item-wrapper .item:nth-child(1) .right h4 {
@@ -3810,17 +3922,20 @@ ul {
   }
 
   .component-item-wrapper .item .divider {
-    display: none; /* Nasconde la barra separatrice */
+    display: none;
+    /* Nasconde la barra separatrice */
   }
 }
 
 @media (max-width: 768px) {
   .section-g-title .component-title {
-    display: none; /* Nasconde il titolo */
+    display: none;
+    /* Nasconde il titolo */
   }
 
   .section-g-title .component-title-hidden {
-    display: block; /* Mostra il titolo */
+    display: block;
+    /* Mostra il titolo */
   }
 
   .section-g-title {
@@ -3828,20 +3943,29 @@ ul {
   }
 
   .section-g-title h3 {
-    font-family: "Publico Headline", serif; /* Cambia il font */
-    font-size: 24px; /* Imposta la dimensione del font */
-    font-weight: bold; /* Mantiene il grassetto */
-    color: black; /* Cambia il colore del testo in nero */
-    background: none; /* Rimuove lo sfondo rosso */
-    padding: 0; /* Rimuove la spaziatura interna */
+    font-family: "Publico Headline", serif;
+    /* Cambia il font */
+    font-size: 24px;
+    /* Imposta la dimensione del font */
+    font-weight: bold;
+    /* Mantiene il grassetto */
+    color: black;
+    /* Cambia il colore del testo in nero */
+    background: none;
+    /* Rimuove lo sfondo rosso */
+    padding: 0;
+    /* Rimuove la spaziatura interna */
     margin: 0;
-    border-radius: 0; /* Rimuove gli angoli arrotondati */
-    letter-spacing: normal; /* Rimuove lo spacing extra */
+    border-radius: 0;
+    /* Rimuove gli angoli arrotondati */
+    letter-spacing: normal;
+    /* Rimuove lo spacing extra */
   }
 
   .section-g-title .white-dot,
   .section-g-title .view-more {
-    display: none; /* Nasconde il pallino bianco e il link accanto */
+    display: none;
+    /* Nasconde il pallino bianco e il link accanto */
   }
 
   .component-item-wrapper .item:nth-child(n+5) {
@@ -3850,12 +3974,18 @@ ul {
   }
 
   .component-item-wrapper .item:nth-child(n+5) h4 {
-    color: black; /* Cambia il colore del titolo in nero */
-    font-size: 12px; /* Mantiene la dimensione del font */
-    line-height: 1.4; /* Migliora la leggibilità */
-    white-space: normal; /* Permette il ritorno a capo */
-    overflow: hidden; /* Nasconde il testo in eccesso */
-    text-overflow: ellipsis; /* Aggiunge "..." al testo tagliato */
+    color: black;
+    /* Cambia il colore del titolo in nero */
+    font-size: 12px;
+    /* Mantiene la dimensione del font */
+    line-height: 1.4;
+    /* Migliora la leggibilità */
+    white-space: normal;
+    /* Permette il ritorno a capo */
+    overflow: hidden;
+    /* Nasconde il testo in eccesso */
+    text-overflow: ellipsis;
+    /* Aggiunge "..." al testo tagliato */
     margin: 0;
   }
 
@@ -3872,7 +4002,471 @@ ul {
   }
 }
 
-/*----------------------------------------------------------------------------------FOOTER---------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------SECTION H-----------------------------------------------------------------*/
+
+.section-h {
+  /* Stili specifici per la seconda section.f */
+  background-color: #FD8724;
+  /* Cambia lo sfondo come esempio */
+}
+
+.section-h .section-c-title,
+.section-h .section-c-title a,
+.section-h .section-c-title .arrow-right {
+  color: white;
+  stroke: white;
+}
+
+.section-h .article-item:nth-child(1) .subtitle {
+  display: none;
+}
+
+@media (max-width: 1020px) {
+  .section-h {
+    position: relative;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.8) 70%, rgba(0, 0, 0, 1) 100%), url('https://placehold.co/1020x670');
+    /* Sostituisci con il link dell'immagine dell'articolo 1 */
+    background-size: cover;
+    /* Adatta l'immagine per coprire l'intera sezione */
+    background-position: center;
+    /* Centra l'immagine */
+    background-repeat: no-repeat;
+    /* Evita la ripetizione dell'immagine */
+    height: 670px;
+  }
+
+  .section-h .section-c-title {
+    display: none;
+    /* Nasconde il titolo */
+  }
+
+  .section-h .article-item:nth-child(1) .subtitle {
+    display: block;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .section-h .load-more-btn {
+    display: block;
+    /* Rendi visibile il bottone */
+    width: 100%;
+    /* Occupa tutta la larghezza disponibile */
+    margin: 20px 0 0;
+    /* Aggiunge spazio sopra */
+    padding: 10px 20px;
+    /* Spaziatura interna */
+    font-size: 16px;
+    /* Dimensione del font */
+    font-weight: bold;
+    /* Testo in grassetto */
+    text-align: center;
+    /* Centra il testo */
+    color: #fff;
+    /* Colore del testo */
+    background-color: transparent;
+    border: 1px solid #d3d3d3 !important;
+    border: none;
+    /* Rimuove il bordo */
+    border-radius: 5px;
+    /* Angoli arrotondati */
+    cursor: pointer;
+    /* Cambia il cursore al passaggio del mouse */
+    text-decoration: none;
+    /* Rimuove la sottolineatura */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Transizione per hover */
+    box-sizing: border-box;
+    /* Include padding e bordi nella larghezza */
+  }
+
+  .section-h .load-more-btn .arrow-right {
+    vertical-align: middle;
+    /* Allinea verticalmente la freccia al centro del testo */
+  }
+
+  .section-h .load-more-btn:hover {
+    background-color: black;
+    /* Cambia il colore di sfondo al passaggio del mouse */
+  }
+}
+
+@media (max-width: 768px) {
+  .section-h .title-container-hidden .subtitle {
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+}
+
+/*-------------------------------------------------SECTION I-----------------------------------------------------------------*/
+
+.section-i {
+  /* Stili specifici per la seconda section.f */
+  background-color: #1766B9;
+  /* Cambia lo sfondo come esempio */
+}
+
+.section-i .section-c-title,
+.section-i .section-c-title a,
+.section-i .section-c-title .arrow-right {
+  color: white;
+  stroke: white;
+}
+
+.section-i .article-item:nth-child(1) .subtitle {
+  display: none;
+}
+
+@media (max-width: 1020px) {
+  .section-i {
+    position: relative;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.8) 70%, rgba(0, 0, 0, 1) 100%), url('https://placehold.co/1020x670');
+    /* Sostituisci con il link dell'immagine dell'articolo 1 */
+    background-size: cover;
+    /* Adatta l'immagine per coprire l'intera sezione */
+    background-position: center;
+    /* Centra l'immagine */
+    background-repeat: no-repeat;
+    /* Evita la ripetizione dell'immagine */
+    height: 670px;
+  }
+
+  .section-i .section-c-title {
+    display: none;
+    /* Nasconde il titolo */
+  }
+
+  .section-i .article-item:nth-child(1) .subtitle {
+    display: block;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .section-i .load-more-btn {
+    display: block;
+    /* Rendi visibile il bottone */
+    width: 100%;
+    /* Occupa tutta la larghezza disponibile */
+    margin: 20px 0 0;
+    /* Aggiunge spazio sopra */
+    padding: 10px 20px;
+    /* Spaziatura interna */
+    font-size: 16px;
+    /* Dimensione del font */
+    font-weight: bold;
+    /* Testo in grassetto */
+    text-align: center;
+    /* Centra il testo */
+    color: #fff;
+    /* Colore del testo */
+    background-color: transparent;
+    border: 1px solid #d3d3d3 !important;
+    border: none;
+    /* Rimuove il bordo */
+    border-radius: 5px;
+    /* Angoli arrotondati */
+    cursor: pointer;
+    /* Cambia il cursore al passaggio del mouse */
+    text-decoration: none;
+    /* Rimuove la sottolineatura */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Transizione per hover */
+    box-sizing: border-box;
+    /* Include padding e bordi nella larghezza */
+  }
+
+  .section-i .load-more-btn .arrow-right {
+    vertical-align: middle;
+    /* Allinea verticalmente la freccia al centro del testo */
+  }
+
+  .section-i .load-more-btn:hover {
+    background-color: black;
+    /* Cambia il colore di sfondo al passaggio del mouse */
+  }
+}
+
+@media (max-width: 768px) {
+  .section-i .title-container-hidden .subtitle {
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+}
+
+/*-------------------------------------------------SECTION NEWS-----------------------------------------------------------------*/
+.news-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 40px 0;
+
+}
+
+.news-category {
+  padding: 0;
+}
+
+.news-category .more {
+  display: none;
+  /* Nasconde il link "more" */
+}
+
+.news-category h3 {
+  font-family: "Publico Headline", serif;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  letter-spacing: normal;
+}
+
+.news-category {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.news-category .news-item {
+  font-size: 15.04px;
+  line-height: 1.14;
+  margin-bottom: 5px;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+}
+
+.news-category .news-item-1 img {
+  margin-bottom: 20px;
+}
+
+.news-category .news-item-2 img,
+.news-category .news-item-3 img,
+.news-category .news-item-4 img,
+.news-category .news-item-5 img {
+  display: none;
+  /* Nasconde gli articoli dal secondo in su */
+}
+
+.news-category a {
+  font-size: 15.04px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+}
+
+.news-category a:hover {
+  text-decoration: underline;
+}
+
+.news-category .divider {
+  border: none;
+  border-top: 1px solid #ddd;
+  /* Colore grigio chiaro */
+  margin: 40px 0 20px 0;
+  /* Spaziatura sopra e sotto la linea */
+}
+
+.news-item .article-date {
+  display: none;
+}
+
+@media (max-width: 1360px) {
+  .news-container {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1020px;
+  }
+}
+
+@media (max-width: 1020px) {
+
+  .news-category .divider,
+  .news-category a {
+    display: none;
+    /* Nasconde la linea divisoria */
+  }
+
+  .news-title {
+    display: flex;
+    align-items:baseline;
+    /* Allinea verticalmente gli elementi */
+    justify-content: flex-start;
+    /* Spaziatura tra il titolo e "More" */
+    gap: 20px;
+    margin-bottom: 20px;
+    /* Spaziatura sotto il titolo */
+  }
+
+  .news-category .more {
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center; /* Allinea la freccia con il testo */
+    gap: 5px; /* Spaziatura tra il testo e la freccia */  }
+
+  .news-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .news-category {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+  }
+
+  .news-title h3 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    font-weight: bold;
+  }
+
+  .news-item {
+    font-family: "Publico Headline", serif;
+    font-size: 17.12px !important;
+  }
+
+  .news-category .news-item-1 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .news-category .news-item-2 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .news-item-2 .picture-and-title-container {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .news-item-2 .article-date {
+    width: 70%;
+  }
+
+  .news-category .news-item-3 {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .news-category .news-item-4 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .news-category .news-item-5 {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .news-category .news-item-2 img,
+  .news-category .news-item-3 img,
+  .news-category .news-item-4 img,
+  .news-category .news-item-5 img {
+    display: block;
+    margin-left: 40px;
+  }
+
+  .news-item-1 img {
+    margin-bottom: 5px !important;
+  }
+
+  .news-item .article-date {
+    display: block;
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 11.04px;
+    margin-top: 5px;
+    font-weight: normal;
+  }
+}
+
+@media (max-width: 768px) {
+  .news-container {
+    grid-template-columns: 1fr;
+  }
+
+  .news-item {
+    justify-content: space-between;
+  }
+
+  .news-category .news-title {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .news-category .news-item-1 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .news-category .news-item-2 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+
+  .news-category .news-item-3 {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+  }
+
+  .news-category .news-item-4 {
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
+  }
+
+  .news-category .news-item-5 {
+    grid-column: 1 / 2;
+    grid-row: 6 / 7;
+  }
+
+  .news-category .more {
+    display: none;
+  }
+
+  .news-category .load-more-btn {
+    grid-column: 1 / 2;
+    grid-row: 7 / 8;
+    display: block; /* Rendi visibile il bottone */
+    width: 100%; /* Occupa tutta la larghezza disponibile */
+    margin: 0 auto; /* Spaziatura sopra */
+    padding: 10px 20px; /* Spaziatura interna */
+    font-size: 13.12px; /* Dimensione del font */
+    font-weight: bold; /* Testo in grassetto */
+    text-align: center; /* Centra il testo */
+    color: black; /* Colore del testo */
+    background-color: transparent; /* Colore di sfondo */
+    border: none; /* Rimuove il bordo */
+    border-radius: 5px; /* Angoli arrotondati */
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+    text-decoration: none; /* Rimuove la sottolineatura */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transizione per hover */
+    border: 1px solid #d3d3d3;
+    box-sizing: border-box;
+  }
+
+  .news-category .arrow-right {
+    vertical-align: middle; /* Allinea verticalmente la freccia al centro del testo */
+    stroke: black;
+  }
+}
+
+/*-------------------------------------------------FOOTER-----------------------------------------------------------------*/
 
 /* Footer */
 .footer {
@@ -3961,7 +4555,7 @@ ul {
   text-align: left;
 }
 
-/*----------------------------------------------------------------------------------@MEDIA---------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------MORE @MEDIA-----------------------------------------------------------------*/
 
 @media (max-width: 767px) {
   .footer-container {
