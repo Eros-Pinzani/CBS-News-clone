@@ -1024,10 +1024,6 @@ ul {
     /* Larghezza massima */
     max-height: 270px;
     /* Altezza massima */
-    min-width: 354px;
-    /* Larghezza minima */
-    min-height: 200px;
-    /* Altezza minima */
     object-fit: cover;
     /* Adatta l'immagine senza distorsioni */
   }
@@ -1039,10 +1035,6 @@ ul {
     /* Larghezza massima */
     max-height: 270px;
     /* Altezza massima */
-    min-width: 354px;
-    /* Larghezza minima */
-    min-height: 200px;
-    /* Altezza minima */
     object-fit: cover;
     /* Adatta l'immagine senza distorsioni */
   }
@@ -1068,7 +1060,7 @@ ul {
   }
 
   .section-a-container .article-item {
-    width: 85%;
+    width: 100%;
     /* Occupa tutta la larghezza disponibile */
     margin: 0 auto;
     /* Centra gli articoli */
@@ -1087,7 +1079,7 @@ ul {
     /* Spaziatura tra immagine, titolo e ora */
     height: auto;
     /* Altezza adattata al contenuto */
-    width: 85%;
+    width: 100%;
   }
 
   /* Live nella seconda riga */
@@ -1103,10 +1095,11 @@ ul {
     /* Centra il contenuto verticalmente */
     background-color: #f4f4f4;
     /* Sfondo grigio chiaro */
-    width: 85%;
+    width: 100%;
     /* Larghezza massima */
     height: auto;
     /* Altezza adattata */
+    margin-bottom: 20px;
   }
 
   /* Articolo 2 nella terza riga */
@@ -1662,10 +1655,6 @@ ul {
     /* Larghezza massima */
     max-height: 270px;
     /* Altezza massima */
-    min-width: 354px;
-    /* Larghezza minima */
-    min-height: 200px;
-    /* Altezza minima */
     object-fit: cover;
     /* Adatta l'immagine senza distorsioni */
   }
@@ -2221,10 +2210,6 @@ ul {
     /* Larghezza massima */
     max-height: 270px;
     /* Altezza massima */
-    min-width: 354px;
-    /* Larghezza minima */
-    min-height: 200px;
-    /* Altezza minima */
     object-fit: cover;
     /* Adatta l'immagine senza distorsioni */
   }
