@@ -513,6 +513,14 @@ ul {
 .under-header-navs {
   overflow: hidden;
   white-space: nowrap;
+  overflow-x: auto; /* Abilita lo scorrimento orizzontale */
+  white-space: nowrap;
+  -ms-overflow-style: none; /* Nasconde la barra di scorrimento in Internet Explorer */
+  scrollbar-width: none; /* Nasconde la barra di scorrimento in Firefox */
+}
+
+.under-header-navs::-webkit-scrollbar {
+  display: none; /* Nasconde la barra di scorrimento in Webkit (Chrome, Safari) */
 }
 
 .under-header-navs ul {
@@ -521,7 +529,7 @@ ul {
   white-space: nowrap;
   gap: 6px;
   list-style: none;
-  padding: 0;
+  padding: 5px;
   margin: 0;
 }
 
@@ -535,11 +543,19 @@ ul {
   align-items: center;
   height: 100%;
   transition: color 0.2s;
-  padding: 0 8px;
+  background: none;
+  border: none;
+  /* Stesso padding delle scritte */
+  cursor: pointer;
+  border-radius: 5px;
+  /* Bordo stondato */
+  transition: background-color 0.2s ease;
+  /* Transizione per lo sfondo */
+  padding: 2px 8px;
 }
 
 .under-header-item a:hover {
-  color: #0072c3;
+  background-color: rgba(210, 210, 210, 0.5);
 }
 
 
@@ -1114,6 +1130,7 @@ ul {
     gap: 5px;
     /* Spaziatura tra titolo e ora */
     justify-content: space-between;
+    margin-bottom: 0;
   }
 
   /* Articolo 3 nella quarta riga */
@@ -1128,7 +1145,7 @@ ul {
     gap: 5px;
     /* Spaziatura tra titolo e ora */
     justify-content: space-between;
-
+    margin-bottom: 0;
   }
 
   /* Nascondi l'ad */
@@ -2881,7 +2898,7 @@ ul {
     /* Larghezza massima */
     margin: 0 auto;
     /* Centra il contenitore */
-    padding: 30px 20px 40px 20px;
+    padding: 30px 20px 0 20px;
     /* Spaziatura interna */
     box-sizing: border-box;
   }
@@ -2944,7 +2961,7 @@ ul {
     /* Larghezza massima */
     margin: 0 auto;
     /* Centra il contenitore */
-    padding: 30px 20px 40px 20px;
+    padding: 30px 20px 0 20px;
     /* Spaziatura interna */
     box-sizing: border-box;
   }
@@ -3224,13 +3241,25 @@ ul {
   margin: 0 0 10px;
 }
 
+.section-f-container .article-item:nth-child(1) .title-container:hover h4 {
+  text-decoration: underline;
+}
+
+.section-f-container .article-item:nth-child(1) .title-container:hover {
+  cursor: pointer;
+}
+
+
 /* Sottolinea il titolo dell'articolo principale solo quando si passa sopra immagine, paragrafo o titolo */
-.section-f-container .article-item:hover h4 {
+.section-f-container .article-item:nth-child(n+2):hover h4 {
   text-decoration: underline;
   /* Aggiunge la sottolineatura */
 }
 
-.section-f-container .article-item:hover {
+.section-f-container .article-item:nth-child(2):hover,
+.section-f-container .article-item:nth-child(3):hover,
+.section-f-container .article-item:nth-child(4):hover,
+.section-f-container .article-item:nth-child(5):hover {
   cursor: pointer;
 }
 
@@ -3495,6 +3524,11 @@ ul {
     /* Allinea il testo a sinistra */
   }
 
+  .title-container-hidden:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
   /* Personalizzazione della barra di scorrimento */
   .section-f-container .articles-container-hidden::-webkit-scrollbar {
     height: 4px;
@@ -3651,7 +3685,7 @@ ul {
   /* Mantiene la dimensione originale degli articoli */
   width: 300px;
   /* Larghezza fissa per ogni articolo */
-  background-color: #0674C8;
+  background-color: #0674c8;
   /* Colore di sfondo blu */
   color: white;
   /* Colore del testo */
@@ -3683,6 +3717,11 @@ ul {
   /* Rimuove la sottolineatura */
   color: inherit;
   /* Mantiene il colore del testo */
+}
+
+.component-item-wrapper .item a:hover {
+  text-decoration: underline;
+  /* Rimuove la sottolineatura al passaggio del mouse */
 }
 
 .component-item-wrapper .item .left {
@@ -3747,7 +3786,7 @@ ul {
   /* Allinea la linea verticalmente */
   width: 1px;
   /* Spessore della linea */
-  background-color: white;
+  background-color: #095d9c;
   /* Colore della linea */
 }
 
@@ -4244,24 +4283,32 @@ ul {
   /* Nasconde gli articoli dal secondo in su */
 }
 
+.news-category .news-item img {
+  cursor: pointer;
+}
+
+.news-container .news-item:hover .title-news,
+.news-container .news-item .title-news:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .news-category a {
   font-size: 15.04px;
   font-weight: bold;
   color: black;
   text-decoration: none;
   letter-spacing: 0.3px;
-}
-
-.news-category a:hover {
-  text-decoration: underline;
+  padding: 20px 0 0 0;
 }
 
 .news-category .divider {
   border: none;
   border-top: 1px solid #ddd;
   /* Colore grigio chiaro */
-  margin: 40px 0 20px 0;
+  margin: 40px 0 0 0;
   /* Spaziatura sopra e sotto la linea */
+  cursor: pointer;
 }
 
 .news-item .article-date {
